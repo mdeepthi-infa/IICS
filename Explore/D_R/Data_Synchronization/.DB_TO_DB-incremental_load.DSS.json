@@ -25,7 +25,7 @@
   "dataFileExtension" : "zip",
   "objectRefs" : [ {
     "id" : "1fghsK7TH0chDhmI9v9vYN",
-    "name" : "DR_SQLServer",
+    "name" : "DR_SQLServer_linux",
     "type" : "Connection",
     "metadata" : {
       "modelVersion" : {
