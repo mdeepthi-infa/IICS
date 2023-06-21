@@ -16,7 +16,7 @@
         "value" : "@1"
       } ],
       "additionalInfo" : {
-        "description" : "",
+        "description" : "TEST1",
         "contentType" : "JSON",
         "documentState" : "VALID"
       }
