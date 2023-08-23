@@ -1,0 +1,45 @@
+{
+  "objectInfo" : {
+    "id" : "1zpRucHXYEPdMp1JAxSL2m",
+    "name" : "tf_cmd_task_new",
+    "type" : "TASKFLOW",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "W1830nYNmumf6S3-gt-17033823-2023-05-03T03:41:24.786Z::tf.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : null,
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "updateTime" : "2023-08-23T06:26:25.935Z",
+  "objectRefs" : [ {
+    "id" : "1tkZYRXVtGPkYkPoPMCmSv",
+    "name" : "indeepti01-linux.informatica.com",
+    "type" : "AgentGroup",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "0024BC2500000000002Z"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : null,
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/SYS"
+  } ]
+}
