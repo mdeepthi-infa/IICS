@@ -18,32 +18,13 @@
       "additionalInfo" : {
         "description" : "",
         "contentType" : "JSON",
-        "documentState" : "INVALID"
+        "documentState" : "VALID"
       }
     }
   },
   "dataFileExtension" : "zip",
+  "updateTime" : "2023-09-12T09:19:36.443Z",
   "objectRefs" : [ {
-    "id" : "lLOLRKXmaWrfctoZ6Xg34A",
-    "name" : "DR_Snowflake_Cloud",
-    "type" : "Connection",
-    "metadata" : {
-      "modelVersion" : {
-        "major" : 0,
-        "minor" : 0
-      },
-      "repoInfo" : {
-        "repoHandle" : "0024BC0B0000000000CU"
-      },
-      "contextAttributes" : null,
-      "additionalInfo" : {
-        "description" : null,
-        "contentType" : "JSON",
-        "documentState" : "COMPLETE"
-      }
-    },
-    "path" : "/SYS"
-  }, {
     "id" : "5hvb2wUuMu6it2aYjGqzAC",
     "name" : "m_Target_Creation",
     "type" : "DTEMPLATE",
@@ -55,10 +36,7 @@
       "repoInfo" : {
         "repoHandle" : "0024BC170000000000HA"
       },
-      "contextAttributes" : [ {
-        "name" : "id",
-        "value" : "@1"
-      } ],
+      "contextAttributes" : null,
       "additionalInfo" : {
         "description" : "",
         "contentType" : "JSON",
@@ -103,6 +81,26 @@
         "description" : null,
         "contentType" : "JSON",
         "documentState" : "VALID"
+      }
+    },
+    "path" : "/SYS"
+  }, {
+    "id" : "11mC261PDMSj6W6xPXckeH",
+    "name" : "DR_Snowflake_Cloud_winvm",
+    "type" : "Connection",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "0024BC0B0000000000G5"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : null,
+        "contentType" : "JSON",
+        "documentState" : "COMPLETE"
       }
     },
     "path" : "/SYS"
