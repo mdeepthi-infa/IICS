@@ -1,0 +1,23 @@
+{
+  "objectInfo" : {
+    "id" : "dgRNF6vFW8nj798Uyph4g2",
+    "name" : "!RKR",
+    "type" : "Project",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : null,
+      "contextAttributes" : [ ],
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "Binary",
+        "documentState" : "COMPLETE"
+      }
+    }
+  },
+  "dataFileExtension" : "json",
+  "updateTime" : "2023-10-18T07:01:32.538Z",
+  "objectRefs" : [ ]
+}

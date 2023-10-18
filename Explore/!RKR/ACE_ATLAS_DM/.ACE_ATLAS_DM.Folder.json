@@ -1,0 +1,23 @@
+{
+  "objectInfo" : {
+    "id" : "l6pjAn8hZqQdzkxTKgaC4u",
+    "name" : "ACE_ATLAS_DM",
+    "type" : "Folder",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : null,
+      "contextAttributes" : [ ],
+      "additionalInfo" : {
+        "description" : "ACE_ATLAS_DM",
+        "contentType" : "Binary",
+        "documentState" : "COMPLETE"
+      }
+    }
+  },
+  "dataFileExtension" : "json",
+  "updateTime" : "2023-10-18T07:01:32.539Z",
+  "objectRefs" : [ ]
+}
