@@ -1,0 +1,23 @@
+{
+  "objectInfo" : {
+    "id" : "9vCmm0480Ptf6D62QeYeem",
+    "name" : "Repros",
+    "type" : "Folder",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : null,
+      "contextAttributes" : [ ],
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "Binary",
+        "documentState" : "COMPLETE"
+      }
+    }
+  },
+  "dataFileExtension" : "json",
+  "updateTime" : "2023-12-14T05:39:13.389Z",
+  "objectRefs" : [ ]
+}
