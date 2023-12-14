@@ -18,15 +18,15 @@
       "additionalInfo" : {
         "description" : "",
         "contentType" : "JSON",
-        "documentState" : "INVALID"
+        "documentState" : "VALID"
       }
     }
   },
   "dataFileExtension" : "zip",
-  "updateTime" : "2023-12-14T05:40:42.891Z",
+  "updateTime" : "2023-12-14T05:45:52.836Z",
   "objectRefs" : [ {
-    "id" : "7lp2A5ul1OalzNsOENPhO8",
-    "name" : "DR_SQLServer",
+    "id" : "iRBg7ULCfoXgAOgSUxWO8s",
+    "name" : "DR_Snowflake_linux",
     "type" : "Connection",
     "metadata" : {
       "modelVersion" : {
@@ -34,7 +34,7 @@
         "minor" : 0
       },
       "repoInfo" : {
-        "repoHandle" : "0024BC0B0000000000GP"
+        "repoHandle" : "0024BC0B0000000000DH"
       },
       "contextAttributes" : null,
       "additionalInfo" : {

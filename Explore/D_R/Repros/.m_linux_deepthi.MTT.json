@@ -23,7 +23,7 @@
     }
   },
   "dataFileExtension" : "zip",
-  "updateTime" : "2023-12-14T05:42:11.002Z",
+  "updateTime" : "2023-12-14T05:45:52.835Z",
   "objectRefs" : [ {
     "id" : "1tkZYRXVtGPkYkPoPMCmSv",
     "name" : "indeepti01-linux.informatica.com",
@@ -45,8 +45,31 @@
     },
     "path" : "/SYS"
   }, {
-    "id" : "2GGVR2QXf4pdFsIHHfJoqw",
-    "name" : "DR_Flatfile_winvm",
+    "id" : "4Adg4JLPChDjsyUpMlLG03",
+    "name" : "m_linux_deepthi",
+    "type" : "DTEMPLATE",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "0024BC170000000000OE"
+      },
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/D_R/Repros"
+  }, {
+    "id" : "iRBg7ULCfoXgAOgSUxWO8s",
+    "name" : "DR_Snowflake_linux",
     "type" : "Connection",
     "metadata" : {
       "modelVersion" : {
@@ -54,7 +77,7 @@
         "minor" : 0
       },
       "repoInfo" : {
-        "repoHandle" : "0024BC0B0000000000DA"
+        "repoHandle" : "0024BC0B0000000000DH"
       },
       "contextAttributes" : null,
       "additionalInfo" : {
@@ -65,24 +88,24 @@
     },
     "path" : "/SYS"
   }, {
-    "id" : "3Z1nOR3I6SPkW25FXdAvmi",
-    "name" : "m_epoch_KB_ref",
-    "type" : "DTEMPLATE",
+    "id" : "aj078r2FehVkSErgOJmFml",
+    "name" : "DR_Flatfile_linux",
+    "type" : "Connection",
     "metadata" : {
       "modelVersion" : {
         "major" : 0,
         "minor" : 0
       },
       "repoInfo" : {
-        "repoHandle" : "0024BC170000000000OA"
+        "repoHandle" : "0024BC0B0000000000D4"
       },
       "contextAttributes" : null,
       "additionalInfo" : {
-        "description" : "",
+        "description" : null,
         "contentType" : "JSON",
-        "documentState" : "VALID"
+        "documentState" : "COMPLETE"
       }
     },
-    "path" : "/Explore/D_R/Repros"
+    "path" : "/SYS"
   } ]
 }
