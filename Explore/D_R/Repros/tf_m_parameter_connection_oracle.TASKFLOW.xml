@@ -13,10 +13,10 @@
       <types1:CreatedBy>Deepthi_usw3</types1:CreatedBy>
       <types1:CreationDate>2023-12-01T09:28:22Z</types1:CreationDate>
       <types1:ModifiedBy>Deepthi_usw3</types1:ModifiedBy>
-      <types1:ModificationDate>2023-12-20T11:45:01Z</types1:ModificationDate>
+      <types1:ModificationDate>2023-12-20T11:46:40Z</types1:ModificationDate>
       <types1:PublicationStatus>published</types1:PublicationStatus>
       <types1:PublishedBy>Deepthi_usw3</types1:PublishedBy>
-      <types1:PublicationDate>2023-12-20T11:45:05Z</types1:PublicationDate>
+      <types1:PublicationDate>2023-12-20T11:46:54Z</types1:PublicationDate>
       <types1:PublishedContributionId>project:/tf.tf_m_parameter_connection_oracle/tf_m_parameter_connection_oracle.tf.xml</types1:PublishedContributionId>
       <types1:AutosaveExists>false</types1:AutosaveExists>
       <types1:Entry>
@@ -50,6 +50,7 @@
                <rest>
                   <allowedGroups>
                      <group>deepthi_usw3</group>
+                     <group>deepthi_na1</group>
                   </allowedGroups>
                </rest>
             </deployment>
@@ -147,5 +148,5 @@
       <types1:GUID>4MF8ffNeJlkkn0ES6gL28v</types1:GUID>
       <types1:DisplayName>tf_m_parameter_connection_oracle</types1:DisplayName>
    </types1:Item>
-   <types1:CurrentServerDateTime>2023-12-20T11:45:27.231Z</types1:CurrentServerDateTime>
+   <types1:CurrentServerDateTime>2023-12-20T11:47:06.243Z</types1:CurrentServerDateTime>
 </aetgt:getResponse>
