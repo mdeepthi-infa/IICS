@@ -1,0 +1,45 @@
+{
+  "objectInfo" : {
+    "id" : "4MF8ffNeJlkkn0ES6gL28v",
+    "name" : "tf_m_parameter_connection_oracle",
+    "type" : "TASKFLOW",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "n9yCEx9dwMbgbdo-gt-16847322-2023-12-01T09:28:22.3Z::tf.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "updateTime" : "2023-12-20T11:45:27.516Z",
+  "objectRefs" : [ {
+    "id" : "1KsOleBkxqKhAruAA5dB81",
+    "name" : "mt_m_parameter_connection_oracle",
+    "type" : "MTT",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "0024BC0Z0000000000PW"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/D_R/Repros"
+  } ]
+}
