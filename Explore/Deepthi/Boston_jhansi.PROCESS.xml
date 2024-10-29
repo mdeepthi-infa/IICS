@@ -1,0 +1,157 @@
+<aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
+                   xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
+   <types1:Item>
+      <types1:EntryId>ylRW8UBM7zsZvEI-gt-140977-2024-10-18T11:43:37.402Z::pd.xml</types1:EntryId>
+      <types1:Name>Boston_jhansi</types1:Name>
+      <types1:MimeType>application/xml+process</types1:MimeType>
+      <types1:Description/>
+      <types1:AppliesTo/>
+      <types1:Tags/>
+      <types1:VersionLabel>1.0</types1:VersionLabel>
+      <types1:State>CURRENT</types1:State>
+      <types1:ProcessGroup/>
+      <types1:CreatedBy>Deepthi_usw3</types1:CreatedBy>
+      <types1:CreationDate>2024-10-18T11:43:37Z</types1:CreationDate>
+      <types1:ModifiedBy>Deepthi_usw3</types1:ModifiedBy>
+      <types1:ModificationDate>2024-10-18T12:41:31Z</types1:ModificationDate>
+      <types1:PublicationStatus>published</types1:PublicationStatus>
+      <types1:PublishedBy>Deepthi_usw3</types1:PublishedBy>
+      <types1:PublicationDate>2024-10-18T12:41:35Z</types1:PublicationDate>
+      <types1:PublishedContributionId>project:/spi.Boston_jhansi/Boston_jhansi.pd.xml</types1:PublishedContributionId>
+      <types1:Entry>
+         <process xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2010/10/avosScreenflow.xsd"
+                  xmlns:tfm="http://schemas.active-endpoints.com/appmodules/screenflow/2021/04/taskflowModel.xsd"
+                  xmlns:list="urn:activevos:spi:list:functions"
+                  GUID="4MlYG3bLzAcfhmRB1NFHus"
+                  displayName="Boston_jhansi"
+                  name="Boston_jhansi"
+                  overrideAPIName="false"
+                  processNamespace="urn:screenflow:process:Process6">
+            <parameterSet xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2021/04/taskflowModel.xsd"/>
+            <appliesTo/>
+            <description/>
+            <tags/>
+            <generator>Informatica Process Designer 11</generator>
+            <output>
+               <field description="" name="output" type="objectlist">
+                  <options>
+                     <option name="required">false</option>
+                     <option name="referenceTo">$type:string</option>
+                     <option hide="true" name="multiSelect">true</option>
+                  </options>
+               </field>
+            </output>
+            <tempFields>
+               <field description="" name="temp" type="objectlist">
+                  <options>
+                     <option name="required">false</option>
+                     <option name="referenceTo">$type:string</option>
+                     <option hide="true" name="multiSelect">true</option>
+                  </options>
+               </field>
+               <field description="" name="temp1" type="int">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </field>
+               <field description="" name="temp2" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </field>
+               <field description="" name="count" type="int">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </field>
+            </tempFields>
+            <notes/>
+            <deployment skipIfRunning="false" suspendOnFault="false" tracingLevel="verbose">
+               <rest>
+                  <allowAnonymousAccess/>
+               </rest>
+            </deployment>
+            <extData>
+               <nvpair name="treatEmptyStringAsNotNull">false</nvpair>
+               <nvpair name="treatEmptyStringAsNull">true</nvpair>
+               <nvpair name="treatEmptyObjectListAsArray">true</nvpair>
+               <nvpair name="treatEmptyObjectListAsNotArray">false</nvpair>
+            </extData>
+            <flow id="f406351ee-5b6c-4e09-b1a2-38c93411c539">
+               <start id="wfc064e8c-8387-44be-a9ce-435ded318f30">
+                  <link id="f4d612a32-c009-4207-ac25-02ed1a296f63"
+                        targetId="Assignment89b4f337-be2f-4b63-aecd-9abc2e50031b"/>
+               </start>
+               <assignment id="Assignment89b4f337-be2f-4b63-aecd-9abc2e50031b">
+                  <title>Assignment to temp1, temp2, etc,</title>
+                  <operation source="constant" to="temp.temp1">1</operation>
+                  <operation source="constant" to="temp.temp2">2</operation>
+                  <operation source="constant" to="temp.count">2</operation>
+                  <link id="l4bd7012b-2ab1-4aec-83b6-c205586ef675"
+                        targetId="Decision318752af-de2b-4ec1-868d-b24a1a981c00"/>
+               </assignment>
+               <container id="Decision318752af-de2b-4ec1-868d-b24a1a981c00" type="exclusive">
+                  <title>count</title>
+                  <flow id="p5289ad9e-0f79-47f6-b247-20a711fcf9c8">
+                     <assignment id="Assignmentbace5d9b-3807-4848-a453-601b4fd4545c">
+                        <title>Assignment to output</title>
+                        <operation source="formula" to="output.output">
+                           <expression language="XQuery">list:append( $output.output , $temp.temp1 )</expression>
+                        </operation>
+                        <link id="i2c86269c-5ff3-4347-91a9-747d9f732681"
+                              targetId="Assignment38de391c-6aab-4555-9e89-a28f12f59bf3"/>
+                     </assignment>
+                     <assignment id="Assignment38de391c-6aab-4555-9e89-a28f12f59bf3">
+                        <title>Assignment to count, temp1</title>
+                        <operation source="formula" to="temp.count">
+                           <expression language="XQuery">$temp.count -1</expression>
+                        </operation>
+                        <operation source="formula" to="temp.temp1">
+                           <expression language="XQuery">$temp.temp1+1</expression>
+                        </operation>
+                        <link id="o5a7a026a-4737-4063-842c-cbf099145d69"
+                              targetId="Jump5bd6dac3-c81a-4bb8-afb7-b7de318aac07"/>
+                     </assignment>
+                     <jumpTo id="Jump5bd6dac3-c81a-4bb8-afb7-b7de318aac07">
+                        <link id="qe210da7c-8e54-44b5-bac2-40437ca9e22f"
+                              targetId="Decision318752af-de2b-4ec1-868d-b24a1a981c00"/>
+                     </jumpTo>
+                  </flow>
+                  <flow id="va8958af9-8e2b-4f96-9664-cee751e5ced4">
+                     <end id="End872fd865-39ba-4684-b313-b46289e10a69">
+                        <title>End 1</title>
+                     </end>
+                  </flow>
+                  <link id="i89301c12-2da5-4220-933c-cf77a69f0ce5"
+                        targetId="p5289ad9e-0f79-47f6-b247-20a711fcf9c8"
+                        type="containerLink">
+                     <condition source="formula">
+                        <function name="greater-than">
+                           <arg name="left">{$temp.count}</arg>
+                           <arg name="right">{0}</arg>
+                        </function>
+                     </condition>
+                  </link>
+                  <link id="k4553eb24-2c8a-4c88-9f43-027cff4da497"
+                        targetId="va8958af9-8e2b-4f96-9664-cee751e5ced4"
+                        type="containerLink"/>
+               </container>
+            </flow>
+         </process>
+         <ns1:sample-data-sets xmlns:ns1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/sampleData.xsd">
+            <ns1:SampleData>
+               <ns1:Id>4eaedcf1-fa60-42e5-8399-f2b48ba87904</ns1:Id>
+               <ns1:Name>test</ns1:Name>
+               <ns1:CreatedBy>Deepthi_usw3</ns1:CreatedBy>
+               <ns1:CreationDate>2024-10-18T12:15:09Z</ns1:CreationDate>
+               <ns1:ModifiedBy>Deepthi_usw3</ns1:ModifiedBy>
+               <ns1:ModificationDate>2024-10-18T12:15:09Z</ns1:ModificationDate>
+               <ns1:Data format="json">{}</ns1:Data>
+            </ns1:SampleData>
+         </ns1:sample-data-sets>
+      </types1:Entry>
+      <types1:GUID>4MlYG3bLzAcfhmRB1NFHus</types1:GUID>
+      <types1:DisplayName>Boston_jhansi</types1:DisplayName>
+   </types1:Item>
+   <types1:CurrentServerDateTime>2024-10-29T09:28:55.779Z</types1:CurrentServerDateTime>
+</aetgt:getResponse>

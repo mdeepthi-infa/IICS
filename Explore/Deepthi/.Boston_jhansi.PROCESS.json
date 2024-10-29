@@ -1,0 +1,27 @@
+{
+  "objectInfo" : {
+    "id" : "4MlYG3bLzAcfhmRB1NFHus",
+    "name" : "Boston_jhansi",
+    "type" : "PROCESS",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "ylRW8UBM7zsZvEI-gt-140977-2024-10-18T11:43:37.402Z::pd.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "updateTime" : "2024-10-29T09:28:55.980Z",
+  "objectRefs" : [ ],
+  "readableFileExtension" : null,
+  "readableFilePresent" : false
+}
