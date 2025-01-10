@@ -1,0 +1,102 @@
+<aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
+                   xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
+   <types1:Item>
+      <types1:EntryId>vvhxiQLnzYLnzYL-gt-33612-2025-01-10T08:01:23.514Z::po.xml</types1:EntryId>
+      <types1:Name>ProcessObject-po-TR-OneWeb-ASStatusTracker-LeadFormInformation</types1:Name>
+      <types1:MimeType>application/xml+processobject</types1:MimeType>
+      <types1:Description/>
+      <types1:AppliesTo/>
+      <types1:Tags/>
+      <types1:VersionLabel>1.0</types1:VersionLabel>
+      <types1:State>CURRENT</types1:State>
+      <types1:ProcessGroup/>
+      <types1:CreatedBy>rajan_PS</types1:CreatedBy>
+      <types1:CreationDate>2025-01-10T08:01:24Z</types1:CreationDate>
+      <types1:ModifiedBy/>
+      <types1:PublicationStatus>unpublished</types1:PublicationStatus>
+      <types1:Entry>
+         <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                        displayName="ProcessObject-po-TR-OneWeb-ASStatusTracker-LeadFormInformation"
+                        isByCopy="true"
+                        name="ProcessObject-po-TR-OneWeb-ASStatusTracker-LeadFormInformation">
+            <description/>
+            <tags/>
+            <detail>
+               <field label="OutledID"
+                      name="OutledID"
+                      nullable="true"
+                      required="false"
+                      type="string">
+                  <options/>
+               </field>
+               <field label="Name"
+                      name="Name"
+                      nullable="true"
+                      required="false"
+                      type="string">
+                  <options/>
+               </field>
+               <field label="Surname"
+                      name="Surname"
+                      nullable="true"
+                      required="false"
+                      type="string">
+                  <options/>
+               </field>
+               <field label="GSMNumber"
+                      name="GSMNumber"
+                      nullable="true"
+                      required="false"
+                      type="string">
+                  <options/>
+               </field>
+               <field label="EmailAddress"
+                      name="EmailAddress"
+                      nullable="true"
+                      required="false"
+                      type="string">
+                  <options/>
+               </field>
+               <field label="ProductName"
+                      name="ProductName"
+                      nullable="true"
+                      required="false"
+                      type="string">
+                  <options/>
+               </field>
+               <field label="ProductPrice"
+                      name="ProductPrice"
+                      nullable="true"
+                      required="false"
+                      type="string">
+                  <options/>
+               </field>
+               <field label="RequestDate"
+                      name="RequestDate"
+                      nullable="true"
+                      required="false"
+                      type="string">
+                  <options/>
+               </field>
+               <field label="UCID"
+                      name="UCID"
+                      nullable="true"
+                      required="false"
+                      type="string">
+                  <options/>
+               </field>
+               <field label="retailerCode"
+                      name="retailerCode"
+                      nullable="true"
+                      required="false"
+                      type="string">
+                  <options/>
+               </field>
+            </detail>
+         </processObject>
+      </types1:Entry>
+      <types1:GUID>lI8q61cUfAMiqT4epaD1et</types1:GUID>
+      <types1:DisplayName>ProcessObject-po-TR-OneWeb-ASStatusTracker-LeadFormInformation</types1:DisplayName>
+   </types1:Item>
+   <types1:CurrentServerDateTime>2025-01-10T08:03:40.931Z</types1:CurrentServerDateTime>
+</aetgt:getResponse>
