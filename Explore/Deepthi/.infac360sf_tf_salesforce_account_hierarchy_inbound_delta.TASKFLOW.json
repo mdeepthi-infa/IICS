@@ -1,0 +1,50 @@
+{
+  "objectInfo" : {
+    "id" : "d4xAps7VEQzls7wdId0zMI",
+    "name" : "infac360sf_tf_salesforce_account_hierarchy_inbound_delta",
+    "type" : "TASKFLOW",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "5nBQ9WYzr3tfUbb-gt-133298-2025-01-21T10:24:27.912Z::tf.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "Runs the mapping task that imports complete data from the Account Hierarchy in Salesforce into the Salesforce Account Hierarchy object.",
+        "contentType" : null,
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "updateTime" : "2025-01-21T10:25:38.464Z",
+  "objectRefs" : [ {
+    "id" : "59TRCZLZSK4kUHZMcHOTij",
+    "name" : "infac360sf_mt_salesforce_account_hierarchy_inbound",
+    "type" : "MTT",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "010QRS0Z00000000003X"
+      },
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : "Runs the mapping that maps the fields of the Account Hierarchy nodes from Salesforce with the fields of the Salesforce Account Hierarchy to import hierarchy data.",
+        "contentType" : null,
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/Deepthi"
+  } ],
+  "readableFileExtension" : null,
+  "readableFilePresent" : false
+}

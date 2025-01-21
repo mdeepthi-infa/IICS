@@ -1,0 +1,169 @@
+<aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
+                   xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
+   <types1:Item>
+      <types1:EntryId>DEPOiVhC2g0aaaa-gt-122534-2025-01-21T10:24:19.474Z::tf.xml</types1:EntryId>
+      <types1:Name>infac360sf_tf_salesforce_personaccount_person_inbound_delta-1</types1:Name>
+      <types1:MimeType>application/xml+taskflow</types1:MimeType>
+      <types1:Description>Runs the mapping task that imports incremental data from the Salesforce Person Accounts object into the Person business entity.</types1:Description>
+      <types1:AppliesTo/>
+      <types1:Tags/>
+      <types1:VersionLabel>1.0</types1:VersionLabel>
+      <types1:State>CURRENT</types1:State>
+      <types1:ProcessGroup/>
+      <types1:CreatedBy>rajan_PS</types1:CreatedBy>
+      <types1:CreationDate>2025-01-21T10:24:19Z</types1:CreationDate>
+      <types1:ModifiedBy/>
+      <types1:PublicationStatus>unpublished</types1:PublicationStatus>
+      <types1:Entry>
+         <taskflow xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2010/10/avosScreenflow.xsd"
+                   xmlns:tfm="http://schemas.active-endpoints.com/appmodules/screenflow/2021/04/taskflowModel.xsd"
+                   xmlns:list="urn:activevos:spi:list:functions"
+                   displayName="infac360sf_tf_salesforce_personaccount_person_inbound_delta"
+                   name="infac360sf_tf_salesforce_personaccount_person_inbound_delta-1"
+                   overrideAPIName="false">
+            <parameterSet xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2021/04/taskflowModel.xsd"/>
+            <appliesTo/>
+            <description>Runs the mapping task that imports incremental data from the Salesforce Person Accounts object into the Person business entity.</description>
+            <tags/>
+            <generator>Informatica Process Designer 11</generator>
+            <input>
+               <parameter description="" name="jobInstanceId" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </parameter>
+            </input>
+            <tempFields>
+               <field description=""
+                      name="infac360sf_mt_salesforce_personaccount_person_inbound"
+                      type="reference">
+                  <options>
+                     <option name="failOnNotRun">false</option>
+                     <option name="failOnFault">false</option>
+                     <option name="referenceTo">$po:infac360sf-mt-salesforce-personaccount-person-inbound</option>
+                  </options>
+               </field>
+            </tempFields>
+            <notes/>
+            <deployment suspendOnFault="false" tracingLevel="verbose">
+               <rest/>
+            </deployment>
+            <flow id="a">
+               <start id="b">
+                  <link id="kp67x0t3" targetId="kp67x0ts"/>
+               </start>
+               <eventContainer id="kp67x0ts">
+                  <service id="kp67x0t2">
+                     <title>infac360sf_mt_salesforce_personaccount_person_inbound</title>
+                     <serviceName>ICSExecuteDataTask</serviceName>
+                     <serviceGUID/>
+                     <serviceInput>
+                        <parameter name="Wait for Task to Complete" source="constant" updatable="true">true</parameter>
+                        <parameter name="Max Wait" source="constant" updatable="true">604800</parameter>
+                        <parameter name="Task Name" source="constant" updatable="true">infac360sf_mt_salesforce_personaccount_person_inbound</parameter>
+                        <parameter name="GUID" source="constant" updatable="true">adKEy0jTLEZfuOUvDUTYKO</parameter>
+                        <parameter name="Task Type" source="constant" updatable="true">MCT</parameter>
+                        <parameter name="Has Inout Parameters" source="constant" updatable="true">true</parameter>
+                        <parameter name="taskField" source="nested">
+                           <operation source="field"
+                                      to="infac360sf-mt-salesforce-personaccount-person-inbound">temp.infac360sf_mt_salesforce_personaccount_person_inbound</operation>
+                           <operation source="field"
+                                      to="infac360sf-mt-salesforce-personaccount-person-inbound/inout[1]/jobInstanceId">input.jobInstanceId</operation>
+                        </parameter>
+                     </serviceInput>
+                     <serviceOutput>
+                        <operation source="field"
+                                   to="temp.infac360sf_mt_salesforce_personaccount_person_inbound/output/Object_Name">Object Name</operation>
+                        <operation source="field"
+                                   to="temp.infac360sf_mt_salesforce_personaccount_person_inbound/output/Run_Id">Run Id</operation>
+                        <operation source="field"
+                                   to="temp.infac360sf_mt_salesforce_personaccount_person_inbound/output/Log_Id">Log Id</operation>
+                        <operation source="field"
+                                   to="temp.infac360sf_mt_salesforce_personaccount_person_inbound/output/Task_Id">Task Id</operation>
+                        <operation source="field"
+                                   to="temp.infac360sf_mt_salesforce_personaccount_person_inbound/output/Task_Status">Task Status</operation>
+                        <operation source="field"
+                                   to="temp.infac360sf_mt_salesforce_personaccount_person_inbound/output/Success_Source_Rows">Success Source Rows</operation>
+                        <operation source="field"
+                                   to="temp.infac360sf_mt_salesforce_personaccount_person_inbound/output/Failed_Source_Rows">Failed Source Rows</operation>
+                        <operation source="field"
+                                   to="temp.infac360sf_mt_salesforce_personaccount_person_inbound/output/Success_Target_Rows">Success Target Rows</operation>
+                        <operation source="field"
+                                   to="temp.infac360sf_mt_salesforce_personaccount_person_inbound/output/Failed_Target_Rows">Failed Target Rows</operation>
+                        <operation source="field"
+                                   to="temp.infac360sf_mt_salesforce_personaccount_person_inbound/output/Start_Time">Start Time</operation>
+                        <operation source="field"
+                                   to="temp.infac360sf_mt_salesforce_personaccount_person_inbound/output/End_Time">End Time</operation>
+                        <operation source="field"
+                                   to="temp.infac360sf_mt_salesforce_personaccount_person_inbound/output/Error_Message">Error Message</operation>
+                        <operation source="field"
+                                   to="temp.infac360sf_mt_salesforce_personaccount_person_inbound/inout/jobInstanceId">jobInstanceId</operation>
+                        <operation source="field"
+                                   to="temp.infac360sf_mt_salesforce_personaccount_person_inbound/inout/load_type">load_type</operation>
+                        <operation source="field"
+                                   to="temp.infac360sf_mt_salesforce_personaccount_person_inbound/inout/v_max_field_1">v_max_field_1</operation>
+                        <operation source="field"
+                                   to="temp.infac360sf_mt_salesforce_personaccount_person_inbound/inout/v_max_field_2">v_max_field_2</operation>
+                        <operation source="field"
+                                   to="temp.infac360sf_mt_salesforce_personaccount_person_inbound/inout/v_min_field_1">v_min_field_1</operation>
+                        <operation source="field"
+                                   to="temp.infac360sf_mt_salesforce_personaccount_person_inbound/inout/v_min_field_2">v_min_field_2</operation>
+                        <operation source="field"
+                                   to="temp.infac360sf_mt_salesforce_personaccount_person_inbound/inout/v_field_type_1">v_field_type_1</operation>
+                        <operation source="field"
+                                   to="temp.infac360sf_mt_salesforce_personaccount_person_inbound/inout/v_field_type_2">v_field_type_2</operation>
+                        <operation source="field"
+                                   to="temp.infac360sf_mt_salesforce_personaccount_person_inbound/inout/v_temp_max_field_1">v_temp_max_field_1</operation>
+                        <operation source="field"
+                                   to="temp.infac360sf_mt_salesforce_personaccount_person_inbound/inout/v_temp_max_field_2">v_temp_max_field_2</operation>
+                        <operation source="field"
+                                   to="temp.infac360sf_mt_salesforce_personaccount_person_inbound/inout/v_temp_min_field_1">v_temp_min_field_1</operation>
+                        <operation source="field"
+                                   to="temp.infac360sf_mt_salesforce_personaccount_person_inbound/inout/v_temp_min_field_2">v_temp_min_field_2</operation>
+                        <operation source="field"
+                                   to="temp.infac360sf_mt_salesforce_personaccount_person_inbound/inout/v_source_filter_condition">v_source_filter_condition</operation>
+                        <operation source="field"
+                                   to="temp.infac360sf_mt_salesforce_personaccount_person_inbound/inout/v_previous_session_start_time">v_previous_session_start_time</operation>
+                     </serviceOutput>
+                  </service>
+                  <link id="kp67x0t4" targetId="c"/>
+                  <events>
+                     <catch faultField="temp.infac360sf_mt_salesforce_personaccount_person_inbound/fault"
+                            id="kp67x0tq"
+                            interrupting="true"
+                            name="error">
+                        <suspend/>
+                     </catch>
+                     <catch faultField="temp.infac360sf_mt_salesforce_personaccount_person_inbound/fault"
+                            id="kp67x0tr"
+                            interrupting="true"
+                            name="warning"/>
+                  </events>
+               </eventContainer>
+               <end id="c"/>
+            </flow>
+            <dependencies>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              displayName="infac360sf-mt-salesforce-personaccount-person-inbound"
+                              isByCopy="true"
+                              name="infac360sf-mt-salesforce-personaccount-person-inbound">
+                  <description/>
+                  <tags/>
+                  <detail>
+                     <field label="Input Parameters" name="input" type="reference"/>
+                     <field label="InOut Parameters" name="inout" type="reference"/>
+                     <field label="TaskProperties Parameters"
+                            name="taskProperties"
+                            type="reference"/>
+                     <field label="Output Parameters" name="output" type="reference"/>
+                     <field label="Fault" name="fault" type="reference"/>
+                  </detail>
+               </processObject>
+            </dependencies>
+         </taskflow>
+      </types1:Entry>
+      <types1:GUID>9P9uKItPOsiiF3ghkflz45</types1:GUID>
+      <types1:DisplayName>infac360sf_tf_salesforce_personaccount_person_inbound_delta</types1:DisplayName>
+   </types1:Item>
+   <types1:CurrentServerDateTime>2025-01-21T10:25:35.586Z</types1:CurrentServerDateTime>
+</aetgt:getResponse>

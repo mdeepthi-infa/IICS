@@ -1,0 +1,50 @@
+{
+  "objectInfo" : {
+    "id" : "2YLhGX9PsqMlBHO9IkcPIh",
+    "name" : "infac360sf_tf_salesforce_contact_contactrel_inbound_initial",
+    "type" : "TASKFLOW",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "67WHK80FIRi92qB-gt-122510-2025-01-21T10:24:16.93Z::tf.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "Runs the mapping task that imports complete data from the Salesforce Account Contact Relationship object to the Person business entity to import data.",
+        "contentType" : null,
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "updateTime" : "2025-01-21T10:25:38.455Z",
+  "objectRefs" : [ {
+    "id" : "dg7LDLb3Vilf71FPGtso4q",
+    "name" : "infac360sf_mt_salesforce_contact_contactrel_inbound",
+    "type" : "MTT",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "010QRS0Z00000000003Y"
+      },
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : "Runs the mapping that maps the fields of the Salesforce Account Contact Relationship object with the fields of the Person business entity to import data.",
+        "contentType" : null,
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/Deepthi"
+  } ],
+  "readableFileExtension" : null,
+  "readableFilePresent" : false
+}

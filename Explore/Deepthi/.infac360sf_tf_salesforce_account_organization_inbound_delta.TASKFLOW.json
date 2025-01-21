@@ -1,0 +1,50 @@
+{
+  "objectInfo" : {
+    "id" : "4uOKRoeRozJix5sPlVZQ8n",
+    "name" : "infac360sf_tf_salesforce_account_organization_inbound_delta",
+    "type" : "TASKFLOW",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "Z6K0XV4KhPVEQrX-gt-122522-2025-01-21T10:24:18.824Z::tf.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "Runs the mapping task that imports incremental data from the Salesforce Accounts object into the Organization business entity to import data.",
+        "contentType" : null,
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "updateTime" : "2025-01-21T10:25:38.475Z",
+  "objectRefs" : [ {
+    "id" : "4cFfmK4YzOZjLeUR5IvZ8S",
+    "name" : "infac360sf_mt_salesforce_account_organization_inbound",
+    "type" : "MTT",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "010QRS0Z000000000041"
+      },
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : "Runs the mapping that maps the fields of the Salesforce Accounts object with the fields of the Organization business entity to import data.",
+        "contentType" : null,
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/Deepthi"
+  } ],
+  "readableFileExtension" : null,
+  "readableFilePresent" : false
+}

@@ -1,0 +1,50 @@
+{
+  "objectInfo" : {
+    "id" : "6fZdqoTZSKvkO4L3Lc2kC7",
+    "name" : "infac360sf_tf_salesforce_contactrel_contact_outbound",
+    "type" : "TASKFLOW",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "BlkZ2sBsoZduD2L-gt-133286-2025-01-21T10:24:26.449Z::tf.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "Runs the mapping task that exports data from the Contact relationship entity to the Salesforce Contact object to export data.",
+        "contentType" : null,
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "updateTime" : "2025-01-21T10:25:38.470Z",
+  "objectRefs" : [ {
+    "id" : "2iRdVbHcysXbanwLiOc7sL",
+    "name" : "infac360sf_mt_salesforce_contactrel_contact_outbound",
+    "type" : "MTT",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "010QRS0Z000000000049"
+      },
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : "Runs the mapping that maps the fields of the Contact relationship object with the fields of the Salesforce Contact object to export data.",
+        "contentType" : null,
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/Deepthi"
+  } ],
+  "readableFileExtension" : null,
+  "readableFilePresent" : false
+}

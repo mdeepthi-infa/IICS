@@ -1,0 +1,50 @@
+{
+  "objectInfo" : {
+    "id" : "2sJlcPgCcijjhbLqjAOrW0",
+    "name" : "infac360sf_tf_salesforce_accountpartner_partnerrel_inbound_initial",
+    "type" : "TASKFLOW",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "Gaaa-gt-122558-2025-01-21T10:24:25.529Z::tf.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "Runs the mapping task that imports the complete data from the Salesforce Account Partner Relationship object to the Account Partner Relationship Object to import data.",
+        "contentType" : null,
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "updateTime" : "2025-01-21T10:25:38.479Z",
+  "objectRefs" : [ {
+    "id" : "gysSDQquCm6jhU5H2eIWA4",
+    "name" : "infac360sf_mt_salesforce_accountpartner_partnerrel_inbound",
+    "type" : "MTT",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "010QRS0Z000000000045"
+      },
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : "Runs the mapping that maps the fields of the Salesforce Account Partner Relationship object with the fields of the Account Partner Relationship Object to import data.",
+        "contentType" : null,
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/Deepthi"
+  } ],
+  "readableFileExtension" : null,
+  "readableFilePresent" : false
+}

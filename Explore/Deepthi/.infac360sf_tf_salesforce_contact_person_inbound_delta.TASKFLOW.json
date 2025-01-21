@@ -1,0 +1,50 @@
+{
+  "objectInfo" : {
+    "id" : "6wKkqA44S2ceftsDAHdhC5",
+    "name" : "infac360sf_tf_salesforce_contact_person_inbound_delta",
+    "type" : "TASKFLOW",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "ptM9hOznKKvvNtL-gt-133274-2025-01-21T10:24:25.251Z::tf.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "Runs the mapping task that imports incremental data from the Salesforce Contacts object to the Person business entity to import data.",
+        "contentType" : null,
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "updateTime" : "2025-01-21T10:25:38.477Z",
+  "objectRefs" : [ {
+    "id" : "a5dZwityIRliTllyDcmGY3",
+    "name" : "infac360sf_mt_salesforce_contact_person_inbound",
+    "type" : "MTT",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "010QRS0Z00000000003Z"
+      },
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : "Runs the mapping that maps the fields of the Salesforce Contacts object with the fields of the Person business entity to import data.",
+        "contentType" : null,
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/Deepthi"
+  } ],
+  "readableFileExtension" : null,
+  "readableFilePresent" : false
+}

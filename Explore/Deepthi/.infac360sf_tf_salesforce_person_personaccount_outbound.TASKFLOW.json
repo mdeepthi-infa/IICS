@@ -1,0 +1,50 @@
+{
+  "objectInfo" : {
+    "id" : "7OgJD6eJyacedMuQf9UxAa",
+    "name" : "infac360sf_tf_salesforce_person_personaccount_outbound",
+    "type" : "TASKFLOW",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "cn8dzWztZK0CYyb-gt-122594-2025-01-21T10:24:28.047Z::tf.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "Runs the mapping task that exports data from the Person business entity into the Salesforce Person Accounts object.",
+        "contentType" : null,
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "updateTime" : "2025-01-21T10:25:38.477Z",
+  "objectRefs" : [ {
+    "id" : "6l9HntL6piLiuvKTXdTZek",
+    "name" : "infac360sf_mt_salesforce_person_personaccount_outbound",
+    "type" : "MTT",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "010QRS0Z000000000046"
+      },
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : "Runs the mapping that maps the fields of the Person business entity with the fields of the Salesforce Person Accounts object to export data.\r\n",
+        "contentType" : null,
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/Deepthi"
+  } ],
+  "readableFileExtension" : null,
+  "readableFilePresent" : false
+}

@@ -1,0 +1,50 @@
+{
+  "objectInfo" : {
+    "id" : "0YZkLAAtrgMdkTmE5NFKox",
+    "name" : "infac360sf_tf_salesforce_personaccount_person_inbound_initial",
+    "type" : "TASKFLOW",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "yeE3mY6pkTjFIMe-gt-122546-2025-01-21T10:24:25.388Z::tf.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "Runs the mapping task that imports complete data from the Salesforce Person Accounts object into the Person business entity.",
+        "contentType" : null,
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "updateTime" : "2025-01-21T10:25:38.459Z",
+  "objectRefs" : [ {
+    "id" : "adKEy0jTLEZfuOUvDUTYKO",
+    "name" : "infac360sf_mt_salesforce_personaccount_person_inbound",
+    "type" : "MTT",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "010QRS0Z000000000042"
+      },
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : "Runs the mapping that maps the fields of the Salesforce Person Accounts object with the fields of the Person business entity to import data.",
+        "contentType" : null,
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/Deepthi"
+  } ],
+  "readableFileExtension" : null,
+  "readableFilePresent" : false
+}
