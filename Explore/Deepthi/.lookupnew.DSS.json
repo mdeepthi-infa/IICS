@@ -1,35 +1,32 @@
 {
   "objectInfo" : {
-    "id" : "lM5qd5qXnsAdjn6JzW4wGa",
-    "name" : "bs-sampletest-loadxml",
-    "type" : "BSERVICE",
+    "id" : "53e5mObZredgsfEggxWm8l",
+    "name" : "lookupnew",
+    "type" : "DSS",
     "metadata" : {
       "modelVersion" : {
         "major" : 0,
         "minor" : 0
       },
       "repoInfo" : {
-        "repoHandle" : "010QRS27000000000002"
+        "repoHandle" : "010QRS0I000000000006"
       },
       "contextAttributes" : [ {
         "name" : "id",
         "value" : "@1"
-      }, {
-        "name" : "010QRS28000000000002",
-        "value" : "lM5qd5qXnsAdjn6JzW4wGa@sampletest"
       } ],
       "additionalInfo" : {
         "description" : "",
-        "contentType" : "JSON",
+        "contentType" : null,
         "documentState" : "VALID"
       }
     }
   },
   "dataFileExtension" : "zip",
-  "updateTime" : "2025-01-21T10:18:59.485Z",
+  "updateTime" : "2025-01-21T10:18:59.484Z",
   "objectRefs" : [ {
-    "id" : "733OpKVSsdjbKd0vg89hGN",
-    "name" : "DR_Restv2_sampletest",
+    "id" : "26lbJG5vOYkb3S8oJUVS8q",
+    "name" : "FlatFile",
     "type" : "Connection",
     "metadata" : {
       "modelVersion" : {
@@ -37,7 +34,7 @@
         "minor" : 0
       },
       "repoInfo" : {
-        "repoHandle" : "010QRS0B00000000001W"
+        "repoHandle" : "010QRS0B00000000000X"
       },
       "contextAttributes" : null,
       "additionalInfo" : {

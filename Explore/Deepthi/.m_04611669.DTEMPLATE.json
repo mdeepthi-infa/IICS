@@ -1,7 +1,7 @@
 {
   "objectInfo" : {
-    "id" : "7RbYXvvNkuGdjc9qeNLfM1",
-    "name" : "m_loadxml_webservice",
+    "id" : "0nnpkQQ34u2gumvFcuBUQw",
+    "name" : "m_04611669",
     "type" : "DTEMPLATE",
     "metadata" : {
       "modelVersion" : {
@@ -9,50 +9,24 @@
         "minor" : 0
       },
       "repoInfo" : {
-        "repoHandle" : "010QRS1700000000004K"
+        "repoHandle" : "010QRS1700000000004W"
       },
       "contextAttributes" : [ {
         "name" : "id",
         "value" : "@1"
       } ],
       "additionalInfo" : {
-        "description" : "",
-        "contentType" : "JSON",
+        "description" : "oracle to snowflake ",
+        "contentType" : null,
         "documentState" : "VALID"
       }
     }
   },
   "dataFileExtension" : "zip",
-  "updateTime" : "2025-01-21T10:18:59.476Z",
+  "updateTime" : "2025-01-21T10:18:59.486Z",
   "objectRefs" : [ {
-    "id" : "lM5qd5qXnsAdjn6JzW4wGa",
-    "name" : "bs-sampletest-loadxml",
-    "type" : "BSERVICE",
-    "metadata" : {
-      "modelVersion" : {
-        "major" : 0,
-        "minor" : 0
-      },
-      "repoInfo" : {
-        "repoHandle" : "010QRS27000000000002"
-      },
-      "contextAttributes" : [ {
-        "name" : "id",
-        "value" : "@1"
-      }, {
-        "name" : "010QRS28000000000002",
-        "value" : "lM5qd5qXnsAdjn6JzW4wGa@sampletest"
-      } ],
-      "additionalInfo" : {
-        "description" : "",
-        "contentType" : "JSON",
-        "documentState" : "VALID"
-      }
-    },
-    "path" : "/Explore/Deepthi"
-  }, {
-    "id" : "12LHkFp4CKEfQayIefpa0O",
-    "name" : "DR_Oracle_linux_mdeepthia",
+    "id" : "1ereGl9KV2hilKGM40NSYg",
+    "name" : "Oracle",
     "type" : "Connection",
     "metadata" : {
       "modelVersion" : {
@@ -60,7 +34,27 @@
         "minor" : 0
       },
       "repoInfo" : {
-        "repoHandle" : "010QRS0B00000000001V"
+        "repoHandle" : "010QRS0B000000000003"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : null,
+        "contentType" : "JSON",
+        "documentState" : "COMPLETE"
+      }
+    },
+    "path" : "/SYS"
+  }, {
+    "id" : "dxdCxzsFuEtjuoaQWstRyt",
+    "name" : "sql_server",
+    "type" : "Connection",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "010QRS0B00000000000S"
       },
       "contextAttributes" : null,
       "additionalInfo" : {

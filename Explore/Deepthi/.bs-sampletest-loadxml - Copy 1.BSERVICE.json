@@ -1,7 +1,7 @@
 {
   "objectInfo" : {
-    "id" : "lM5qd5qXnsAdjn6JzW4wGa",
-    "name" : "bs-sampletest-loadxml",
+    "id" : "2W9esu6fr2jb36soRqF2wj",
+    "name" : "bs-sampletest-loadxml - Copy 1",
     "type" : "BSERVICE",
     "metadata" : {
       "modelVersion" : {
@@ -9,24 +9,24 @@
         "minor" : 0
       },
       "repoInfo" : {
-        "repoHandle" : "010QRS27000000000002"
+        "repoHandle" : "010QRS27000000000003"
       },
       "contextAttributes" : [ {
         "name" : "id",
         "value" : "@1"
       }, {
-        "name" : "010QRS28000000000002",
-        "value" : "lM5qd5qXnsAdjn6JzW4wGa@sampletest"
+        "name" : "010QRS28000000000003",
+        "value" : "2W9esu6fr2jb36soRqF2wj@sampletest"
       } ],
       "additionalInfo" : {
         "description" : "",
-        "contentType" : "JSON",
+        "contentType" : null,
         "documentState" : "VALID"
       }
     }
   },
   "dataFileExtension" : "zip",
-  "updateTime" : "2025-01-21T10:18:59.485Z",
+  "updateTime" : "2025-01-21T10:18:59.482Z",
   "objectRefs" : [ {
     "id" : "733OpKVSsdjbKd0vg89hGN",
     "name" : "DR_Restv2_sampletest",
