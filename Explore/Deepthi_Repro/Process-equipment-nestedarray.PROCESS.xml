@@ -1,0 +1,95 @@
+<aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
+                   xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
+   <types1:Item>
+      <types1:EntryId>Oaaa-gt-4644193-2024-12-05T12:14:13.648Z::pd.xml</types1:EntryId>
+      <types1:Name>Process-equipment-nestedarray</types1:Name>
+      <types1:MimeType>application/xml+process</types1:MimeType>
+      <types1:Description/>
+      <types1:AppliesTo/>
+      <types1:Tags>.anonymous</types1:Tags>
+      <types1:VersionLabel>1.0</types1:VersionLabel>
+      <types1:State>CURRENT</types1:State>
+      <types1:ProcessGroup/>
+      <types1:CreatedBy>Deepthi_usw3</types1:CreatedBy>
+      <types1:CreationDate>2024-12-05T12:14:14Z</types1:CreationDate>
+      <types1:ModifiedBy>Deepthi_usw3</types1:ModifiedBy>
+      <types1:ModificationDate>2024-12-05T12:17:27Z</types1:ModificationDate>
+      <types1:PublicationStatus>out-of-date</types1:PublicationStatus>
+      <types1:PublishedBy>Deepthi_usw3</types1:PublishedBy>
+      <types1:PublicationDate>2024-12-05T12:14:16Z</types1:PublicationDate>
+      <types1:PublishedContributionId>project:/spi.Process-equipment-nestedarray/Process-equipment-nestedarray.pd.xml</types1:PublishedContributionId>
+      <types1:Entry>
+         <process xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2010/10/avosScreenflow.xsd"
+                  xmlns:tfm="http://schemas.active-endpoints.com/appmodules/screenflow/2021/04/taskflowModel.xsd"
+                  xmlns:list="urn:activevos:spi:list:functions"
+                  GUID="igGfzevgTAQhXTpQTnNnYt"
+                  displayName="Process-equipment-nestedarray"
+                  name="Process-equipment-nestedarray"
+                  overrideAPIName="false">
+            <parameterSet xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2021/04/taskflowModel.xsd"/>
+            <appliesTo/>
+            <description/>
+            <tags>.anonymous</tags>
+            <generator>Informatica Process Designer 11</generator>
+            <tempFields>
+               <field description="" name="equipment" type="objectlist">
+                  <options>
+                     <option name="referenceTo">$po:DR-Equipment</option>
+                     <option hide="true" name="multiSelect">true</option>
+                     <option name="required">false</option>
+                     <option name="isCopy">true</option>
+                     <option name="guid">7RzzGSwSoeYkaQfO5yif69</option>
+                  </options>
+               </field>
+               <field description="" name="test" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </field>
+               <field description="" name="equip" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </field>
+               <field description="" name="final" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </field>
+            </tempFields>
+            <notes/>
+            <deployment skipIfRunning="false" suspendOnFault="false" tracingLevel="verbose">
+               <rest>
+                  <allowAnonymousAccess/>
+               </rest>
+            </deployment>
+            <extData>
+               <nvpair name="treatEmptyStringAsNotNull">false</nvpair>
+               <nvpair name="treatEmptyObjectListAsArray">true</nvpair>
+            </extData>
+            <flow id="a">
+               <start id="b">
+                  <link id="m4b9t43v" targetId="m4b9t43u"/>
+               </start>
+               <assignment id="m4b9t43u">
+                  <title>Assignment to equip, equipment etc.</title>
+                  <operation source="constant" to="temp.equip">{   "ChangedIntervention": {     "equipements": [ { "code_equipement": "5062", "code_gamme": "Legal control external", "realisee": "1" }, { "code_equipement": "5063", "code_gamme": "Legal control internal", "realisee": "1" } ],"test":"test 	} 	}</operation>
+                  <operation source="formula" to="temp.equipment">
+                     <expression language="XQuery">let $var:=$temp.equip //equipements
+return $var</expression>
+                  </operation>
+                  <operation source="constant" to="temp.test">"test":"test</operation>
+                  <operation source="formula" to="temp.final">
+                     <expression language="XQuery">concat( $temp.equipment , ',',$temp.test  )</expression>
+                  </operation>
+                  <link id="m4b9t43w" targetId="c"/>
+               </assignment>
+               <end id="c"/>
+            </flow>
+         </process>
+      </types1:Entry>
+      <types1:GUID>igGfzevgTAQhXTpQTnNnYt</types1:GUID>
+      <types1:DisplayName>Process-equipment-nestedarray</types1:DisplayName>
+   </types1:Item>
+   <types1:CurrentServerDateTime>2025-01-21T05:35:27.497Z</types1:CurrentServerDateTime>
+</aetgt:getResponse>

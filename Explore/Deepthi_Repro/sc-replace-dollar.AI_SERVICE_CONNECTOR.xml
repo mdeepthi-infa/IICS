@@ -1,0 +1,63 @@
+<aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
+                   xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
+   <types1:Item>
+      <types1:EntryId>UtoVVVVVVVVVVVV-gt-4325043-2024-12-04T06:19:31.757Z::svc.xml</types1:EntryId>
+      <types1:Name>sc-replace-dollar</types1:Name>
+      <types1:MimeType>application/xml+businesssconnector</types1:MimeType>
+      <types1:Description/>
+      <types1:AppliesTo/>
+      <types1:Tags/>
+      <types1:VersionLabel>1.0</types1:VersionLabel>
+      <types1:State>CURRENT</types1:State>
+      <types1:ProcessGroup/>
+      <types1:CreatedBy>Deepthi_usw3</types1:CreatedBy>
+      <types1:CreationDate>2024-12-04T06:19:32Z</types1:CreationDate>
+      <types1:ModifiedBy/>
+      <types1:PublicationStatus>unpublished</types1:PublicationStatus>
+      <types1:Entry>
+         <businessConnector xmlns="http://schemas.informatica.com/socrates/data-services/2014/05/business-connector-model.xsd"
+                            agentOnly="false"
+                            debug="false"
+                            displayName="sc-replace-dollar"
+                            label=""
+                            name="sc-replace-dollar"
+                            uuid="89ef3d48-828d-4037-87bc-a55b1126ea3f">
+            <description/>
+            <tags/>
+            <connectionAttributes xmlns="http://schemas.informatica.com/appmodules/screenflow/2014/04/avosConnectors.xsd"/>
+            <actions>
+               <action category=""
+                       failOnError="true"
+                       forSearch="false"
+                       label="replace"
+                       maxRedirects="100"
+                       name="replace"
+                       preemptiveAuth="true"
+                       responseEncoding="">
+                  <description/>
+                  <input/>
+                  <binding>
+                     <restSimpleBinding multiUsing="semicolonSeparated"
+                                        url="https://www.google.com/"
+                                        verb="GET">
+                        <mutualAuth enabled="false">
+                           <keyStore mode="file"/>
+                           <keyStorePassword/>
+                        </mutualAuth>
+                     </restSimpleBinding>
+                  </binding>
+                  <output>
+                     <field description="" name="test" type="string">
+                        <xquery>{fn:replace('te$t', "[\-./$]", "")}</xquery>
+                     </field>
+                  </output>
+               </action>
+            </actions>
+            <objects/>
+         </businessConnector>
+      </types1:Entry>
+      <types1:GUID>1pwxya12IYDh1Va9CtZAaP</types1:GUID>
+      <types1:DisplayName>sc-replace-dollar</types1:DisplayName>
+   </types1:Item>
+   <types1:CurrentServerDateTime>2025-01-21T05:35:26.794Z</types1:CurrentServerDateTime>
+</aetgt:getResponse>

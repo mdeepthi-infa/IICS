@@ -1,0 +1,27 @@
+{
+  "objectInfo" : {
+    "id" : "4FfTYx53rGQkj9jIwP57wY",
+    "name" : "service_connector_file_attachment_process",
+    "type" : "AI_SERVICE_CONNECTOR",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "neO0fXs3C6LlRkP-gt-3163703-2024-10-08T09:41:18.225Z::svc.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "updateTime" : "2025-01-21T05:35:29.629Z",
+  "objectRefs" : [ ],
+  "readableFileExtension" : null,
+  "readableFilePresent" : false
+}

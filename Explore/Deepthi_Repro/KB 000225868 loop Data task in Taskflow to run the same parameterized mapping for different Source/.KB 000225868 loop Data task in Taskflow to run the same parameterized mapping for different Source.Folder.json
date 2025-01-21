@@ -1,0 +1,25 @@
+{
+  "objectInfo" : {
+    "id" : "fjdoPTY0TAdk9UvRIYsHYR",
+    "name" : "KB 000225868 loop Data task in Taskflow to run the same parameterized mapping for different Source",
+    "type" : "Folder",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : null,
+      "contextAttributes" : [ ],
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "Binary",
+        "documentState" : "COMPLETE"
+      }
+    }
+  },
+  "dataFileExtension" : "json",
+  "updateTime" : "2025-01-21T05:35:29.631Z",
+  "objectRefs" : [ ],
+  "readableFileExtension" : null,
+  "readableFilePresent" : false
+}

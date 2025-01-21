@@ -1,0 +1,47 @@
+{
+  "objectInfo" : {
+    "id" : "bMLfIcZBzC3cjb55WFqRku",
+    "name" : "Process-XMLtoJSON-forwardslash-Saxon",
+    "type" : "PROCESS",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "pk4AdypKwKBqRi9-gt-2957179-2024-11-27T10:49:12.248Z::pd.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "updateTime" : "2025-01-21T05:35:29.628Z",
+  "objectRefs" : [ {
+    "id" : "7W7QENlC0DxgkSCzTJjoOT",
+    "name" : "AC-FileWriter",
+    "type" : "AI_CONNECTION",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "IjG3lqAOclkZ2sB-gt-43042561-2024-04-01T05:26:24.558Z::conn.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/Deepthi"
+  } ],
+  "readableFileExtension" : null,
+  "readableFilePresent" : false
+}

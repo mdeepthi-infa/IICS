@@ -1,0 +1,117 @@
+<aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
+                   xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
+   <types1:Item>
+      <types1:EntryId>pk4AdypKwKBqRi9-gt-2957179-2024-11-27T10:49:12.248Z::pd.xml</types1:EntryId>
+      <types1:Name>Process-XMLtoJSON-forwardslash-Saxon</types1:Name>
+      <types1:MimeType>application/xml+process</types1:MimeType>
+      <types1:Description/>
+      <types1:AppliesTo/>
+      <types1:Tags>.anonymous</types1:Tags>
+      <types1:VersionLabel>1.0</types1:VersionLabel>
+      <types1:State>CURRENT</types1:State>
+      <types1:ProcessGroup/>
+      <types1:CreatedBy>Deepthi_usw3</types1:CreatedBy>
+      <types1:CreationDate>2024-11-27T10:49:12Z</types1:CreationDate>
+      <types1:ModifiedBy>Deepthi_usw3</types1:ModifiedBy>
+      <types1:ModificationDate>2024-11-27T11:08:12Z</types1:ModificationDate>
+      <types1:PublicationStatus>published</types1:PublicationStatus>
+      <types1:PublishedBy>Deepthi_usw3</types1:PublishedBy>
+      <types1:PublicationDate>2024-11-27T11:08:15Z</types1:PublicationDate>
+      <types1:PublishedContributionId>project:/spi.Process-XMLtoJSON-forwardslash-Saxon/Process-XMLtoJSON-forwardslash-Saxon.pd.xml</types1:PublishedContributionId>
+      <types1:Entry>
+         <process xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2010/10/avosScreenflow.xsd"
+                  xmlns:tfm="http://schemas.active-endpoints.com/appmodules/screenflow/2021/04/taskflowModel.xsd"
+                  xmlns:list="urn:activevos:spi:list:functions"
+                  GUID="bMLfIcZBzC3cjb55WFqRku"
+                  displayName="Process-XMLtoJSON-forwardslash-Saxon"
+                  name="Process-XMLtoJSON-forwardslash-Saxon"
+                  overrideAPIName="false">
+            <parameterSet xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2021/04/taskflowModel.xsd"/>
+            <appliesTo/>
+            <description/>
+            <tags>.anonymous</tags>
+            <generator>Informatica Process Designer 11</generator>
+            <output>
+               <field description="" name="output" type="reference">
+                  <options>
+                     <option name="required">false</option>
+                     <option name="referenceTo">$po:$any</option>
+                     <option name="isCopy">true</option>
+                  </options>
+               </field>
+               <field description="" name="JSONoutput" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </field>
+            </output>
+            <tempFields>
+               <field description="" name="XMLfield" type="xml">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </field>
+               <field description="" name="filewriter" type="reference">
+                  <options>
+                     <option name="referenceTo">AC-FileWriter:FileWriteTask</option>
+                     <option name="required">false</option>
+                     <option name="isCopy">true</option>
+                     <option name="guid">7W7QENlC0DxgkSCzTJjoOT</option>
+                  </options>
+               </field>
+            </tempFields>
+            <notes/>
+            <deployment skipIfRunning="false" suspendOnFault="false" tracingLevel="verbose">
+               <rest>
+                  <allowAnonymousAccess/>
+               </rest>
+            </deployment>
+            <extData>
+               <nvpair name="treatEmptyStringAsNotNull">false</nvpair>
+               <nvpair name="treatEmptyStringAsNull">true</nvpair>
+               <nvpair name="treatEmptyObjectListAsArray">true</nvpair>
+               <nvpair name="treatEmptyObjectListAsNotArray">false</nvpair>
+            </extData>
+            <flow id="p30dcd941-5600-42e2-a1ba-0c6ae83d1369">
+               <start id="u0094dc1a-3eaf-42fc-a6f3-c3c6cc43a3ed">
+                  <link id="ib1cbaf18-6d8d-43dd-b2ee-72bcc19d55f7"
+                        targetId="a17j3mnWSojRGlTzBn6PvY0D-Assignment96761b17-8b83-4621-8adf-b7cda6d8e4e1"/>
+               </start>
+               <assignment id="a17j3mnWSojRGlTzBn6PvY0D-Assignment96761b17-8b83-4621-8adf-b7cda6d8e4e1">
+                  <title>Assignment to XMLfield, output</title>
+                  <operation source="formula" to="temp.XMLfield">
+                     <expression language="XQuery">&lt;root&gt;Test /&lt;/root&gt;</expression>
+                  </operation>
+                  <operation source="formula" to="output.output">
+                     <expression language="XQuery">serialize($temp.XMLfield , map{'method':'json', 'use-character-maps' : map { '/' : '/' }})</expression>
+                  </operation>
+                  <link id="m3zot0pt" targetId="m3zot0ps"/>
+               </assignment>
+               <assignment id="m3zot0ps">
+                  <title>Assignment to Content Format, File name etc.</title>
+                  <operation source="constant" to="temp.filewriter[1]/format">PlainText</operation>
+                  <operation source="constant" to="temp.filewriter[1]/fileName">JSONforwardslash</operation>
+                  <operation source="field" to="temp.filewriter[1]/content">output.output</operation>
+                  <link id="m3zot0pu" targetId="m3zot0pa"/>
+               </assignment>
+               <service id="m3zot0pa">
+                  <title>FileWriter</title>
+                  <serviceName>AC-FileWriter:FileWriter</serviceName>
+                  <serviceGUID>7W7QENlC0DxgkSCzTJjoOT</serviceGUID>
+                  <serviceInput>
+                     <parameter name="fileWriteTask" source="field" updatable="true">temp.filewriter</parameter>
+                  </serviceInput>
+                  <link id="m3zot0pc"
+                        targetId="a17j3mnWSojRGlTzBn6PvY0D-end-wbf0df99b-7af0-404f-a8e9-f82b9c37e264"/>
+               </service>
+               <end id="a17j3mnWSojRGlTzBn6PvY0D-end-wbf0df99b-7af0-404f-a8e9-f82b9c37e264">
+                  <title>End</title>
+               </end>
+            </flow>
+         </process>
+      </types1:Entry>
+      <types1:GUID>bMLfIcZBzC3cjb55WFqRku</types1:GUID>
+      <types1:DisplayName>Process-XMLtoJSON-forwardslash-Saxon</types1:DisplayName>
+   </types1:Item>
+   <types1:CurrentServerDateTime>2025-01-21T05:35:26.668Z</types1:CurrentServerDateTime>
+</aetgt:getResponse>

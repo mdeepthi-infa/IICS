@@ -1,0 +1,413 @@
+<aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
+                   xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
+   <types1:Item>
+      <types1:EntryId>beMUvIw8jIw8jIw-gt-69599242-2024-09-11T13:17:35.028Z::tf.xml</types1:EntryId>
+      <types1:Name>TF_CHANGE_Shelf_Life-1</types1:Name>
+      <types1:MimeType>application/xml+taskflow</types1:MimeType>
+      <types1:Description/>
+      <types1:AppliesTo/>
+      <types1:Tags/>
+      <types1:VersionLabel>1.0</types1:VersionLabel>
+      <types1:State>CURRENT</types1:State>
+      <types1:ProcessGroup/>
+      <types1:CreatedBy>Deepthi_usw3</types1:CreatedBy>
+      <types1:CreationDate>2024-09-11T13:17:35Z</types1:CreationDate>
+      <types1:ModifiedBy/>
+      <types1:PublicationStatus>unpublished</types1:PublicationStatus>
+      <types1:Entry>
+         <taskflow xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2010/10/avosScreenflow.xsd"
+                   xmlns:tfm="http://schemas.active-endpoints.com/appmodules/screenflow/2021/04/taskflowModel.xsd"
+                   xmlns:list="urn:activevos:spi:list:functions"
+                   displayName="TF_CHANGE_Shelf_Life"
+                   name="TF_CHANGE_Shelf_Life-1"
+                   overrideAPIName="false">
+            <parameterSet xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2021/04/taskflowModel.xsd"/>
+            <appliesTo/>
+            <description/>
+            <tags/>
+            <generator>Informatica Process Designer 11</generator>
+            <tempFields>
+               <field description=""
+                      name="Command Task to execute script"
+                      type="reference">
+                  <options>
+                     <option name="referenceTo">$po:INFA-commandTask</option>
+                     <option name="failOnNotRun">false</option>
+                     <option name="failOnFault">false</option>
+                  </options>
+               </field>
+               <field description="" name="DT_CHANGE_Shelf_Life" type="reference">
+                  <options>
+                     <option name="referenceTo">$po:mt-splitfiles-shelf-life-hhlPYiHbWatkzc5jckD2A0</option>
+                     <option name="failOnNotRun">false</option>
+                     <option name="failOnFault">true</option>
+                  </options>
+               </field>
+               <field description="" name="Command Task to move files" type="reference">
+                  <options>
+                     <option name="referenceTo">$po:INFA-commandTask</option>
+                     <option name="required">false</option>
+                     <option name="isCopy">true</option>
+                     <option name="failOnNotRun">false</option>
+                     <option name="failOnFault">false</option>
+                  </options>
+               </field>
+               <field description="" name="ReciepientAddress" type="string">
+                  <options>
+                     <option name="required">false</option>
+                     <option name="initialvalue">DL-BGSP360Support@exchange.boeing.com</option>
+                     <option name="source">constant</option>
+                  </options>
+               </field>
+               <field description="" name="Environment" type="string">
+                  <options>
+                     <option name="required">false</option>
+                     <option name="initialvalue">QA</option>
+                     <option name="source">constant</option>
+                  </options>
+               </field>
+            </tempFields>
+            <notes/>
+            <deployment skipIfRunning="false" suspendOnFault="false" tracingLevel="verbose">
+               <rest/>
+            </deployment>
+            <extData>
+               <nvpair name="treatEmptyStringAsNotNull">false</nvpair>
+               <nvpair name="treatEmptyObjectListAsArray">false</nvpair>
+            </extData>
+            <flow id="a">
+               <start id="b">
+                  <link id="lqnsxu9z" targetId="lqnsxtx8"/>
+               </start>
+               <eventContainer id="lqnsxtx8">
+                  <service id="lqnsxtwq">
+                     <title>Command Task to execute script</title>
+                     <serviceName>ICSExecuteCommandTask</serviceName>
+                     <serviceGUID/>
+                     <serviceInput>
+                        <parameter name="Task Name" source="constant">Command Task to execute script</parameter>
+                        <parameter name="Wait for Task to Complete" source="constant">true</parameter>
+                        <parameter name="Runtime Environment" source="constant">0024BC25000000000031:indeepthi01_win</parameter>
+                        <parameter name="Max Wait" source="constant">86399</parameter>
+                        <parameter name="Script Name" source="constant"/>
+                        <parameter name="Input Arguments" source="constant"/>
+                        <parameter name="Work Directory" source="constant"/>
+                        <parameter name="RuntimeEnvGUID" source="constant">lUfSIfweAg1bwFTOHevXKC</parameter>
+                        <parameter name="FailTaskIfAnyScriptFails" source="constant">false</parameter>
+                        <parameter name="taskField" source="nested">
+                           <operation source="field" to="INFA-commandTask">temp.Command Task to move files</operation>
+                           <operation source="constant" to="INFA-commandTask/input[1]/script-1/name">Script1</operation>
+                           <operation source="constant" to="INFA-commandTask/input[1]/script-1/scriptName">/data/params/P360/Template_Check.sh</operation>
+                           <operation source="constant"
+                                      to="INFA-commandTask/input[1]/script-1/inputArguments">"CHANGE_Shelf_Life_Dummy", "CHANGE_Shelf_Life", "/opt/app/data/feeds/outbound/sourcefiles/P360/splitfiles"
+                           
+                           
+                           <expression language="XQuery">"CHANGE_Lead_Time_and_Sizing_Step_2_Plants", "/opt/app/data/feeds/outbound/sourcefiles/P360/splitfiles"</expression>
+                           </operation>
+                           <operation source="constant" to="INFA-commandTask/input[1]/script-1/workDir"/>
+                        </parameter>
+                     </serviceInput>
+                     <serviceOutput>
+                        <operation source="field" to="temp.Command Task to execute script/output/Run_Id">Run Id</operation>
+                        <operation source="field"
+                                   to="temp.Command Task to execute script/output/Start_Time">Start Time</operation>
+                        <operation source="field" to="temp.Command Task to execute script/output/End_Time">End Time</operation>
+                        <operation source="field"
+                                   to="temp.Command Task to execute script/output/Exit_Code">Exit Code</operation>
+                        <operation source="field"
+                                   to="temp.Command Task to execute script/output/Execution_Status">Execution Status</operation>
+                        <operation source="field"
+                                   to="temp.Command Task to execute script/output/Std_Error">Std Error</operation>
+                     </serviceOutput>
+                  </service>
+                  <link id="lqnsxtxq" targetId="lqnsxtxp"/>
+                  <events>
+                     <catch faultField="temp.Command Task to execute script/fault"
+                            id="lqnsxtx7"
+                            interrupting="true"
+                            name="error">
+                        <suspend/>
+                     </catch>
+                  </events>
+               </eventContainer>
+               <container id="lqnsxtxp" type="exclusive">
+                  <title>Decision 1</title>
+                  <flow id="lqnsxtxz">
+                     <eventContainer id="lqnsxu70">
+                        <service id="lqnsxu6f">
+                           <title>DT_CHANGE_Shelf_Life</title>
+                           <serviceName>ICSExecuteDataTask</serviceName>
+                           <serviceGUID/>
+                           <serviceInput>
+                              <parameter name="Wait for Task to Complete" source="constant" updatable="true">true</parameter>
+                              <parameter name="Max Wait" source="constant" updatable="true">604800</parameter>
+                              <parameter name="Task Name" source="constant" updatable="true">mt_splitfiles_shelf_life</parameter>
+                              <parameter name="GUID" source="constant" updatable="true">hhlPYiHbWatkzc5jckD2A0</parameter>
+                              <parameter name="Task Type" source="constant" updatable="true">MCT</parameter>
+                              <parameter name="Has Inout Parameters" source="constant" updatable="true">false</parameter>
+                              <parameter name="taskField" source="nested">
+                                 <operation source="field" to="mt-splitfiles-shelf-life-hhlPYiHbWatkzc5jckD2A0">temp.DT_CHANGE_Shelf_Life</operation>
+                              </parameter>
+                           </serviceInput>
+                           <serviceOutput>
+                              <operation source="field" to="temp.DT_CHANGE_Shelf_Life/output/Object_Name">Object Name</operation>
+                              <operation source="field" to="temp.DT_CHANGE_Shelf_Life/output/Run_Id">Run Id</operation>
+                              <operation source="field" to="temp.DT_CHANGE_Shelf_Life/output/Log_Id">Log Id</operation>
+                              <operation source="field" to="temp.DT_CHANGE_Shelf_Life/output/Task_Id">Task Id</operation>
+                              <operation source="field" to="temp.DT_CHANGE_Shelf_Life/output/Task_Status">Task Status</operation>
+                              <operation source="field"
+                                         to="temp.DT_CHANGE_Shelf_Life/output/Success_Source_Rows">Success Source Rows</operation>
+                              <operation source="field" to="temp.DT_CHANGE_Shelf_Life/output/Failed_Source_Rows">Failed Source Rows</operation>
+                              <operation source="field"
+                                         to="temp.DT_CHANGE_Shelf_Life/output/Success_Target_Rows">Success Target Rows</operation>
+                              <operation source="field" to="temp.DT_CHANGE_Shelf_Life/output/Failed_Target_Rows">Failed Target Rows</operation>
+                              <operation source="field" to="temp.DT_CHANGE_Shelf_Life/output/Start_Time">Start Time</operation>
+                              <operation source="field" to="temp.DT_CHANGE_Shelf_Life/output/End_Time">End Time</operation>
+                              <operation source="field" to="temp.DT_CHANGE_Shelf_Life/output/Error_Message">Error Message</operation>
+                              <operation source="field" to="temp.DT_CHANGE_Shelf_Life/output/TotalTransErrors">Total Transformation Errors</operation>
+                              <operation source="field" to="temp.DT_CHANGE_Shelf_Life/output/FirstErrorCode">First Error Code</operation>
+                           </serviceOutput>
+                        </service>
+                        <flow id="ltgzjy3l">
+                           <link id="ltgzjy3m" targetId="lqnsxu70" type="containerLink"/>
+                        </flow>
+                        <flow id="ltgzjy3o">
+                           <service id="ltgzjy3v">
+                              <title>EmailNotificationTask</title>
+                              <serviceName>emailNotificationService</serviceName>
+                              <serviceGUID/>
+                              <serviceInput>
+                                 <parameter name="Email To" source="constant">$temp.ReciepientAddress </parameter>
+                                 <parameter name="Email Cc" source="constant"/>
+                                 <parameter name="Email Bcc" source="constant"/>
+                                 <parameter name="Email Subject" source="constant">Failure : Split of template CHANGE_Shelf_Life failed</parameter>
+                                 <parameter name="Email Content Type" source="constant">html</parameter>
+                                 <parameter name="Email Body" source="formula">
+                                    <expression language="XQuery">let $emailbody:=  &lt;html lang="en"&gt;
+&lt;head&gt;
+&lt;style&gt;
+table {{
+  width: 100%;
+  border: 1px solid #000;
+  table-layout: auto;
+}},
+
+th, td {{
+  width: 25%;
+  text-align: left;
+  vertical-align: top;
+  border: 1px solid #000;
+  border-collapse: collapse;
+  padding: 0.3em;
+  caption-side: bottom;
+}},
+
+caption {{
+  padding: 0.3em;
+  color: #fff;
+  background: #000;
+}},
+
+th {{
+  background: #eee;
+  padding: 5px;
+}},
+tr:nth-child(odd) {{
+  background-color: #eee;
+}},
+tr:nth-child(even) {{
+ background-color: #fff;
+}}
+&lt;/style&gt;
+
+
+&lt;/head&gt;
+&lt;body&gt;
+&lt;p&gt;Dear Team,&lt;br/&gt;&lt;br/&gt;&lt;/p&gt;
+&lt;p&gt;This is an email from Informatica, the job TF_CHANGE_Shelf_Life has failed. Please find the details of the process below:&lt;/p&gt;
+
+&lt;table style="width:80%;" bgcolor="#efefef"&gt;
+&lt;caption style="font-weight:bold; text-align:center"&gt;Job details:&lt;/caption&gt;
+&lt;tr&gt;
+&lt;th&gt;Environment:&lt;/th&gt;
+&lt;td colspan="2"&gt;{$temp.Environment }&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;th&gt;Object Name:&lt;/th&gt;
+&lt;td colspan="2"&gt;TF_CHANGE_Shelf_Life&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;th&gt;Source System Name:&lt;/th&gt;
+&lt;td colspan="2"&gt;P360&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;th&gt;Task Status:&lt;/th&gt;
+&lt;td colspan="2"&gt;Failed&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;th&gt;Data Flow Step:&lt;/th&gt;
+&lt;td colspan="2"&gt;Split File Error notification&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;th&gt;Process Id:&lt;/th&gt;
+&lt;td colspan="2"&gt;{util:getProcessId()}&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;th&gt;Error Message:&lt;/th&gt;
+&lt;td colspan="2"&gt;{$temp.DT_CHANGE_Shelf_Life[1]/fault[1]/reason } &lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;th&gt;Prod Ops Email:&lt;/th&gt;
+&lt;td colspan="2"&gt;&lt;a href="mailto:DL-BGSP360Support@exchange.boeing.com"&gt;DL-BGSP360Support@exchange.boeing.com&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;th&gt;Log Directory:&lt;/th&gt;
+&lt;td colspan="2"&gt;&lt;a href="/informatica/agentcore/apps/Data_Integration_Server/data/logs"&gt;/informatica/agentcore/apps/Data_Integration_Server/data/logs&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/table&gt;&lt;p&gt;**** This is a system generated email, Please DO NOT reply to this email and reach out to Informatica support for further details ****&lt;br/&gt;&lt;br/&gt;&lt;/p&gt;
+&lt;p&gt;Best Regards,&lt;br/&gt;&lt;/p&gt;
+&lt;p style="font-weight:bold;"&gt;Informatica Prod Ops&lt;/p&gt;
+&lt;hr&gt;&lt;/hr&gt;
+&lt;q&gt;This e-mail message, including attachments, may contain confidential, proprietary, or export controlled information.Any unauthorized disclosure, distribution, or other use is prohibited, unless expressly authorized.If you receive this e-mail in error, please notify the sender, and delete all copies of the original message from your systems.&lt;/q&gt;
+&lt;hr&gt;&lt;/hr&gt;
+&lt;/body&gt;
+&lt;/html&gt; return util:toXML($emailbody)</expression>
+                                 </parameter>
+                              </serviceInput>
+                              <serviceOutput/>
+                              <link id="ltgzjy4k" targetId="ltgzjy58"/>
+                           </service>
+                           <eventContainer id="ltgzjy58">
+                              <service id="ltgzjy4j">
+                                 <title>Command Task to move files</title>
+                                 <serviceName>ICSExecuteCommandTask</serviceName>
+                                 <serviceGUID/>
+                                 <serviceInput>
+                                    <parameter name="Task Name" source="constant">Command Task to move files</parameter>
+                                    <parameter name="Wait for Task to Complete" source="constant">true</parameter>
+                                    <parameter name="Runtime Environment" source="constant">0024BC25000000000031:indeepthi01_win</parameter>
+                                    <parameter name="Max Wait" source="constant">86400</parameter>
+                                    <parameter name="Script Name" source="constant"/>
+                                    <parameter name="Input Arguments" source="constant"/>
+                                    <parameter name="Work Directory" source="constant"/>
+                                    <parameter name="RuntimeEnvGUID" source="constant">lUfSIfweAg1bwFTOHevXKC</parameter>
+                                    <parameter name="FailTaskIfAnyScriptFails" source="constant">false</parameter>
+                                    <parameter name="taskField" source="nested">
+                                       <operation source="field" to="INFA-commandTask">temp.Command Task to move files</operation>
+                                       <operation source="constant" to="INFA-commandTask/input[1]/script-1/name">Script1</operation>
+                                       <operation source="constant" to="INFA-commandTask/input[1]/script-1/scriptName">/data/params/P360/move_invalidsplitfiles.sh</operation>
+                                       <operation source="constant"
+                                                  to="INFA-commandTask/input[1]/script-1/inputArguments">"/opt/app/data/feeds/outbound/sourcefiles/P360/splitfiles/CHANGE_Shelf_Life"</operation>
+                                       <operation source="constant" to="INFA-commandTask/input[1]/script-1/workDir"/>
+                                    </parameter>
+                                 </serviceInput>
+                                 <serviceOutput>
+                                    <operation source="field" to="temp.Command Task to move files/output/Run_Id">Run Id</operation>
+                                    <operation source="field" to="temp.Command Task to move files/output/Start_Time">Start Time</operation>
+                                    <operation source="field" to="temp.Command Task to move files/output/End_Time">End Time</operation>
+                                    <operation source="field" to="temp.Command Task to move files/output/Exit_Code">Exit Code</operation>
+                                    <operation source="field"
+                                               to="temp.Command Task to move files/output/Execution_Status">Execution Status</operation>
+                                    <operation source="field" to="temp.Command Task to move files/output/Std_Error">Std Error</operation>
+                                 </serviceOutput>
+                              </service>
+                              <events>
+                                 <catch faultField="temp.Command Task to move files/fault"
+                                        id="ltgzjy57"
+                                        interrupting="true"
+                                        name="error">
+                                    <suspend/>
+                                 </catch>
+                              </events>
+                           </eventContainer>
+                           <link id="ltgzjy3p" targetId="lqnsxu70" type="containerLink"/>
+                        </flow>
+                        <link id="ltgzjy3k" targetId="ltgzjy3l" type="containerLink"/>
+                        <events>
+                           <catch faultField="temp.DT_CHANGE_Shelf_Life/fault"
+                                  id="lqmirfv0"
+                                  interrupting="true"
+                                  name="error">
+                              <link id="ltgzjy3n" targetId="ltgzjy3o" type="containerLink"/>
+                           </catch>
+                           <catch faultField="temp.DT_CHANGE_Shelf_Life/fault"
+                                  id="lqmirfv1"
+                                  interrupting="true"
+                                  name="warning"/>
+                        </events>
+                     </eventContainer>
+                     <link id="lqnsxty0" targetId="lqnsxtxp" type="containerLink"/>
+                  </flow>
+                  <flow id="lqnsxty1">
+                     <link id="lqnsxty2" targetId="lqnsxtxp" type="containerLink"/>
+                  </flow>
+                  <link id="lqnsxtxs" targetId="lqnsxtxz" type="containerLink">
+                     <condition source="formula">
+                        <function name="string-equals">
+                           <arg name="left">{$temp.CommandTasktomovefiles[1]/output[1]/Execution_Status}</arg>
+                           <arg name="right">SUCCEEDED</arg>
+                        </function>
+                     </condition>
+                  </link>
+                  <link id="lqnsxtxv" targetId="lqnsxty1" type="containerLink"/>
+                  <link id="lqnsxu33" targetId="c"/>
+               </container>
+               <end id="c"/>
+            </flow>
+            <dependencies>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              displayName="INFA-commandTask"
+                              isByCopy="true"
+                              name="INFA-commandTask">
+                  <description>This process object represents a taskflow specific command task output field details.</description>
+                  <tags/>
+                  <detail>
+                     <field label="Output Parameters"
+                            name="output"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="Fault"
+                            name="fault"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                  </detail>
+               </processObject>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              displayName="mt-splitfiles-shelf-life-hhlPYiHbWatkzc5jckD2A0"
+                              isByCopy="true"
+                              name="mt-splitfiles-shelf-life-hhlPYiHbWatkzc5jckD2A0">
+                  <description/>
+                  <tags/>
+                  <detail>
+                     <field label="TaskProperties Parameters"
+                            name="taskProperties"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="Output Parameters"
+                            name="output"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="Fault"
+                            name="fault"
+                            nullable="true"
+                            required="false"
+                            type="reference"/>
+                     <field label="Max Wait (Seconds)"
+                            name="Max_Wait"
+                            nullable="true"
+                            required="false"
+                            type="int"/>
+                  </detail>
+               </processObject>
+            </dependencies>
+         </taskflow>
+      </types1:Entry>
+      <types1:GUID>4KyDEss185vbl6KN3KNM8D</types1:GUID>
+      <types1:DisplayName>TF_CHANGE_Shelf_Life</types1:DisplayName>
+   </types1:Item>
+   <types1:CurrentServerDateTime>2025-01-21T05:35:29.471Z</types1:CurrentServerDateTime>
+</aetgt:getResponse>

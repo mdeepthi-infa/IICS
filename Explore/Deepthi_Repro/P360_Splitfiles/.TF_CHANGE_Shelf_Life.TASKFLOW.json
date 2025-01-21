@@ -1,0 +1,70 @@
+{
+  "objectInfo" : {
+    "id" : "4KyDEss185vbl6KN3KNM8D",
+    "name" : "TF_CHANGE_Shelf_Life",
+    "type" : "TASKFLOW",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "beMUvIw8jIw8jIw-gt-69599242-2024-09-11T13:17:35.028Z::tf.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "updateTime" : "2025-01-21T05:35:29.628Z",
+  "objectRefs" : [ {
+    "id" : "lUfSIfweAg1bwFTOHevXKC",
+    "name" : "indeepthi01_win",
+    "type" : "AgentGroup",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "0024BC25000000000031"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : null,
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/SYS"
+  }, {
+    "id" : "hhlPYiHbWatkzc5jckD2A0",
+    "name" : "mt_splitfiles_shelf_life",
+    "type" : "MTT",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "0024BC0Z0000000000XE"
+      },
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/Deepthi_Repro/P360_Splitfiles"
+  } ],
+  "readableFileExtension" : null,
+  "readableFilePresent" : false
+}

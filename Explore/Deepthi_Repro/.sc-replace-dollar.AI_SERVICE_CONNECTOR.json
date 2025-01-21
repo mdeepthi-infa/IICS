@@ -1,0 +1,27 @@
+{
+  "objectInfo" : {
+    "id" : "1pwxya12IYDh1Va9CtZAaP",
+    "name" : "sc-replace-dollar",
+    "type" : "AI_SERVICE_CONNECTOR",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "UtoVVVVVVVVVVVV-gt-4325043-2024-12-04T06:19:31.757Z::svc.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "updateTime" : "2025-01-21T05:35:29.630Z",
+  "objectRefs" : [ ],
+  "readableFileExtension" : null,
+  "readableFilePresent" : false
+}

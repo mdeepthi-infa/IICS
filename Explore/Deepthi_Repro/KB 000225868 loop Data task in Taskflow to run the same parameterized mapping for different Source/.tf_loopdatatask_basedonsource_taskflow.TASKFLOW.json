@@ -1,0 +1,73 @@
+{
+  "objectInfo" : {
+    "id" : "kttSQuhKHimh07M5HkPBSk",
+    "name" : "tf_loopdatatask_basedonsource_taskflow",
+    "type" : "TASKFLOW",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "3bcnfXjISUXL86z-gt-6930107-2024-09-27T06:39:46.883Z::tf.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "updateTime" : "2025-01-21T05:35:29.627Z",
+  "objectRefs" : [ {
+    "id" : "2uY9YmZvxptgByQTz47a2m",
+    "name" : "mt_loopdatatask_dummymapping",
+    "type" : "MTT",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "0024BC0Z0000000000YL"
+      },
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : null,
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/Deepthi_Repro/KB 000225868 loop Data task in Taskflow to run the same parameterized mapping for different Source"
+  }, {
+    "id" : "8wO5UpAzE6TgRypefrJzyi",
+    "name" : "mt_parameterizedmapping_source",
+    "type" : "MTT",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "0024BC0Z0000000000YM"
+      },
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : null,
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/Deepthi_Repro/KB 000225868 loop Data task in Taskflow to run the same parameterized mapping for different Source"
+  } ],
+  "readableFileExtension" : null,
+  "readableFilePresent" : false
+}

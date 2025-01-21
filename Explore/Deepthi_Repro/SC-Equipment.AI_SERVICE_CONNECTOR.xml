@@ -1,0 +1,88 @@
+<aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
+                   xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
+   <types1:Item>
+      <types1:EntryId>nfSmbduaa-gt-4640165-2024-12-05T12:05:32.25Z::svc.xml</types1:EntryId>
+      <types1:Name>SC-Equipment</types1:Name>
+      <types1:MimeType>application/xml+businesssconnector</types1:MimeType>
+      <types1:Description/>
+      <types1:AppliesTo/>
+      <types1:Tags/>
+      <types1:VersionLabel>1.0</types1:VersionLabel>
+      <types1:State>CURRENT</types1:State>
+      <types1:ProcessGroup/>
+      <types1:CreatedBy>Deepthi_usw3</types1:CreatedBy>
+      <types1:CreationDate>2024-12-05T12:05:32Z</types1:CreationDate>
+      <types1:ModifiedBy/>
+      <types1:PublicationStatus>unpublished</types1:PublicationStatus>
+      <types1:Entry>
+         <businessConnector xmlns="http://schemas.informatica.com/socrates/data-services/2014/05/business-connector-model.xsd"
+                            agentOnly="false"
+                            debug="false"
+                            displayName="SC-Equipment"
+                            label=""
+                            name="SC-Equipment"
+                            uuid="407a69ec-2ee5-4066-90c0-7473f58dee22">
+            <description/>
+            <tags/>
+            <connectionAttributes xmlns="http://schemas.informatica.com/appmodules/screenflow/2014/04/avosConnectors.xsd"/>
+            <actions>
+               <action category=""
+                       failOnError="true"
+                       forSearch="false"
+                       label="equipment"
+                       maxRedirects="100"
+                       name="equipment"
+                       preemptiveAuth="true"
+                       responseEncoding="">
+                  <description/>
+                  <input/>
+                  <binding>
+                     <restSimpleBinding multiUsing="semicolonSeparated"
+                                        url="https://www.google.com"
+                                        verb="GET">
+                        <mutualAuth enabled="false">
+                           <keyStore mode="file"/>
+                           <keyStorePassword/>
+                        </mutualAuth>
+                     </restSimpleBinding>
+                  </binding>
+                  <output>
+                     <field description="" name="equipment1" type="string">
+                        <xquery>"equipements": [
+{{
+"code_equipement": "5062",
+"code_gamme": "Legal control external",
+"realisee": "1"
+}},
+{{
+"code_equipement": "5063",
+"code_gamme": "Legal control internal",
+"realisee": "1"
+}}
+]</xquery>
+                     </field>
+                     <field description="" name="Equipment" type="objectlist">
+                        <options>
+                           <option name="relationshipName">Child</option>
+                           <option name="referenceTo">$po:$any</option>
+                        </options>
+                        <xquery>{let $var:= $equipment1 
+return $var}</xquery>
+                     </field>
+                     <field description="" name="test" type="string">
+                        <xquery>"test":"test</xquery>
+                     </field>
+                     <field description="" name="final" type="string">
+                        <xquery>{concat( $Equipment, ',',$test )}</xquery>
+                     </field>
+                  </output>
+               </action>
+            </actions>
+            <objects/>
+         </businessConnector>
+      </types1:Entry>
+      <types1:GUID>9SxHal8dZyIgHutJGy2nqd</types1:GUID>
+      <types1:DisplayName>SC-Equipment</types1:DisplayName>
+   </types1:Item>
+   <types1:CurrentServerDateTime>2025-01-21T05:35:26.763Z</types1:CurrentServerDateTime>
+</aetgt:getResponse>

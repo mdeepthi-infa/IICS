@@ -1,0 +1,47 @@
+{
+  "objectInfo" : {
+    "id" : "igGfzevgTAQhXTpQTnNnYt",
+    "name" : "Process-equipment-nestedarray",
+    "type" : "PROCESS",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "Oaaa-gt-4644193-2024-12-05T12:14:13.648Z::pd.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "updateTime" : "2025-01-21T05:35:29.629Z",
+  "objectRefs" : [ {
+    "id" : "7RzzGSwSoeYkaQfO5yif69",
+    "name" : "DR-Equipment",
+    "type" : "PROCESS_OBJECT",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "uKNf4TsrT2htghG-gt-4638247-2024-12-05T11:48:18.325Z::po.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/Deepthi_Repro"
+  } ],
+  "readableFileExtension" : null,
+  "readableFilePresent" : false
+}

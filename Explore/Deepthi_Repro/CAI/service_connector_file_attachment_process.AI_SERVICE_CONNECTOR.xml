@@ -1,0 +1,209 @@
+<aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
+                   xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
+   <types1:Item>
+      <types1:EntryId>neO0fXs3C6LlRkP-gt-3163703-2024-10-08T09:41:18.225Z::svc.xml</types1:EntryId>
+      <types1:Name>service_connector_file_attachment_process</types1:Name>
+      <types1:MimeType>application/xml+businesssconnector</types1:MimeType>
+      <types1:Description/>
+      <types1:AppliesTo/>
+      <types1:Tags/>
+      <types1:VersionLabel>1.0</types1:VersionLabel>
+      <types1:State>CURRENT</types1:State>
+      <types1:ProcessGroup/>
+      <types1:CreatedBy>Deepthi_usw3</types1:CreatedBy>
+      <types1:CreationDate>2024-10-08T09:41:18Z</types1:CreationDate>
+      <types1:ModifiedBy>Deepthi_usw3</types1:ModifiedBy>
+      <types1:ModificationDate>2024-10-08T12:53:14Z</types1:ModificationDate>
+      <types1:PublicationStatus>unpublished</types1:PublicationStatus>
+      <types1:Entry>
+         <businessConnector xmlns="http://schemas.informatica.com/socrates/data-services/2014/05/business-connector-model.xsd"
+                            agentOnly="false"
+                            debug="false"
+                            displayName="service_connector_file_attachment_process"
+                            label=""
+                            name="service_connector_file_attachment_process"
+                            uuid="802cacb5-5006-4c79-b0b3-2bedb818e63d">
+            <description/>
+            <tags/>
+            <connectionAttributes xmlns="http://schemas.informatica.com/appmodules/screenflow/2014/04/avosConnectors.xsd"/>
+            <actions>
+               <action category=""
+                       failOnError="true"
+                       forSearch="false"
+                       label="get_token"
+                       maxRedirects="100"
+                       name="get_token"
+                       preemptiveAuth="true"
+                       responseEncoding="">
+                  <description/>
+                  <input/>
+                  <binding>
+                     <restSimpleBinding multiUsing="semicolonSeparated"
+                                        url="https://ls-emea-es-sbx-vmxb9e0c.authentication.eu20.hana.ondemand.com/oauth/token?grant_type=client_credentials"
+                                        verb="POST">
+                        <authentication>
+                           <username>sb-5ec10807-c9d5-4e58-b538-63d67489b78c!b77626|sdm-di-DocumentManagement-sdm_integration!b873</username>
+                           <password/>
+                           <isExpressionInPassword>false</isExpressionInPassword>
+                        </authentication>
+                        <mutualAuth enabled="false">
+                           <keyStore mode="file"/>
+                           <keyStorePassword/>
+                        </mutualAuth>
+                        <body generateUsing="JSON" preserveJsonStringFormatting="true"/>
+                     </restSimpleBinding>
+                  </binding>
+                  <output>
+                     <field description=""
+                            name="token"
+                            property="access_token"
+                            type="string"/>
+                  </output>
+               </action>
+               <action category=""
+                       failOnError="true"
+                       forSearch="false"
+                       label="download_document"
+                       maxRedirects="100"
+                       name="download_document"
+                       preemptiveAuth="true"
+                       responseEncoding="">
+                  <description/>
+                  <input>
+                     <parameter description="Document Id to be downloaded"
+                                label="Document Identifier"
+                                name="document_id"
+                                required="true"
+                                testWith="j4NJlZ5gwarIA3sTDUVpksWXfxS1BPrNr-m9qwXuXkU"
+                                type="string"/>
+                     <parameter description="Bearer Token"
+                                label="Bearer Token"
+                                name="token"
+                                required="true"
+                                testWith="eyJhbGciOiJSUzI1NiIsImprdSI6Imh0dHBzOi8vbHMtZW1lYS1lcy1zYngtdm14YjllMGMuYXV0aGVudGljYXRpb24uZXUyMC5oYW5hLm9uZGVtYW5kLmNvbS90b2tlbl9rZXlzIiwia2lkIjoiZGVmYXVsdC1qd3Qta2V5LTFiZWY4MWVhZGQiLCJ0eXAiOiJKV1QiLCJqaWQiOiAiTlhwS3RoU3JiaEV6aWZ6WkZFMThNTmhFRFpGMnBncDhuL2htUWF1alAwVT0ifQ.eyJqdGkiOiI4Y2Y4NDI0YTBjMTU0OGE0YmExMWJhNGFlNzljOTE1ZiIsImV4dF9hdHRyIjp7ImVuaGFuY2VyIjoiWFNVQUEiLCJzdWJhY2NvdW50aWQiOiI5YjNjODY4Ny02N2M4LTRhYzYtODA2YS1mYmE4Mzc4OTljZjkiLCJ6ZG4iOiJscy1lbWVhLWVzLXNieC12bXhiOWUwYyIsInNlcnZpY2VpbnN0YW5jZWlkIjoiNWVjMTA4MDctYzlkNS00ZTU4LWI1MzgtNjNkNjc0ODliNzhjIn0sInN1YiI6InNiLTVlYzEwODA3LWM5ZDUtNGU1OC1iNTM4LTYzZDY3NDg5Yjc4YyFiNzc2MjZ8c2RtLWRpLURvY3VtZW50TWFuYWdlbWVudC1zZG1faW50ZWdyYXRpb24hYjg3MyIsImF1dGhvcml0aWVzIjpbInNkbS1kaS1Eb2N1bWVudE1hbmFnZW1lbnQtc2RtX2ludGVncmF0aW9uIWI4NzMuc2RtYWRtaW4iLCJzZG0tZGktRG9jdW1lbnRNYW5hZ2VtZW50LXNkbV9pbnRlZ3JhdGlvbiFiODczLnNkbWJ1c2luZXNzYWRtaW4iLCJ1YWEucmVzb3VyY2UiLCJzZG0tZGktRG9jdW1lbnRNYW5hZ2VtZW50LXNkbV9pbnRlZ3JhdGlvbiFiODczLnNkbXVzZXIiLCJzZG0tZGktRG9jdW1lbnRNYW5hZ2VtZW50LXNkbV9pbnRlZ3JhdGlvbiFiODczLnNkbW1pZ3JhdGlvbmFkbWluIl0sInNjb3BlIjpbInNkbS1kaS1Eb2N1bWVudE1hbmFnZW1lbnQtc2RtX2ludGVncmF0aW9uIWI4NzMuc2RtYnVzaW5lc3NhZG1pbiIsInVhYS5yZXNvdXJjZSIsInNkbS1kaS1Eb2N1bWVudE1hbmFnZW1lbnQtc2RtX2ludGVncmF0aW9uIWI4NzMuc2RtYWRtaW4iLCJzZG0tZGktRG9jdW1lbnRNYW5hZ2VtZW50LXNkbV9pbnRlZ3JhdGlvbiFiODczLnNkbXVzZXIiLCJzZG0tZGktRG9jdW1lbnRNYW5hZ2VtZW50LXNkbV9pbnRlZ3JhdGlvbiFiODczLnNkbW1pZ3JhdGlvbmFkbWluIl0sImNsaWVudF9pZCI6InNiLTVlYzEwODA3LWM5ZDUtNGU1OC1iNTM4LTYzZDY3NDg5Yjc4YyFiNzc2MjZ8c2RtLWRpLURvY3VtZW50TWFuYWdlbWVudC1zZG1faW50ZWdyYXRpb24hYjg3MyIsImNpZCI6InNiLTVlYzEwODA3LWM5ZDUtNGU1OC1iNTM4LTYzZDY3NDg5Yjc4YyFiNzc2MjZ8c2RtLWRpLURvY3VtZW50TWFuYWdlbWVudC1zZG1faW50ZWdyYXRpb24hYjg3MyIsImF6cCI6InNiLTVlYzEwODA3LWM5ZDUtNGU1OC1iNTM4LTYzZDY3NDg5Yjc4YyFiNzc2MjZ8c2RtLWRpLURvY3VtZW50TWFuYWdlbWVudC1zZG1faW50ZWdyYXRpb24hYjg3MyIsImdyYW50X3R5cGUiOiJjbGllbnRfY3JlZGVudGlhbHMiLCJyZXZfc2lnIjoiNDMzNmE2OGQiLCJpYXQiOjE3MjY4ODMyNjEsImV4cCI6MTcyNjkyNjQ2MSwiaXNzIjoiaHR0cHM6Ly9scy1lbWVhLWVzLXNieC12bXhiOWUwYy5hdXRoZW50aWNhdGlvbi5ldTIwLmhhbmEub25kZW1hbmQuY29tL29hdXRoL3Rva2VuIiwiemlkIjoiOWIzYzg2ODctNjdjOC00YWM2LTgwNmEtZmJhODM3ODk5Y2Y5IiwiYXVkIjpbInNiLTVlYzEwODA3LWM5ZDUtNGU1OC1iNTM4LTYzZDY3NDg5Yjc4YyFiNzc2MjZ8c2RtLWRpLURvY3VtZW50TWFuYWdlbWVudC1zZG1faW50ZWdyYXRpb24hYjg3MyIsInVhYSIsInNkbS1kaS1Eb2N1bWVudE1hbmFnZW1lbnQtc2RtX2ludGVncmF0aW9uIWI4NzMiXX0.Q8XDBJVh5X_0qtt-yjtPxDf-wmoOUJP34tBiMIsgtYmZ6lAx_qXuVW-Q0uV5KGCk5FqVDsmGHcY4if2SgWui6Ub6qszaW1XE9PJJz4fkp5xs0CESNq2RKJhwNo0PXTuMwXVu7Rb8UjCuMdWpdpJd7TC9wO2o08E-rZUjMDbaTjLd5ISjpNQxPOsMHyb7oXFuIeB7EeBfVk9iajxdPXglFJJnFQQwLWHOP_ULCuVdXMNZSqHE9fXDAtOzDmJkZXwJy0ZWlD0uSqDkanvxuGFyWiatmR5z1Or7Bd4W_CLRLVh9aU6-B_SADyvru0i_-wnS6_OPevBtKeJcmGtR1PAeJg"
+                                type="string"/>
+                  </input>
+                  <binding>
+                     <restSimpleBinding multiUsing="semicolonSeparated"
+                                        url="https://api-sdm-di.cfapps.eu20.hana.ondemand.com/browser/ZSBX_MDM/root/test_folder?download=attachment&amp;amp;cmisselector=content&amp;amp;objectId={$document_id}"
+                                        verb="GET">
+                        <mutualAuth enabled="false">
+                           <keyStore mode="file"/>
+                           <keyStorePassword/>
+                        </mutualAuth>
+                        <httpHeaders>
+                           <header name="Authorization">Bearer {$token}</header>
+                        </httpHeaders>
+                     </restSimpleBinding>
+                  </binding>
+                  <output>
+                     <field attachments="true"
+                            description=""
+                            name="read_ducument_response"
+                            type="attachment"/>
+                  </output>
+               </action>
+               <action category=""
+                       failOnError="true"
+                       forSearch="false"
+                       label="upload_document"
+                       maxRedirects="100"
+                       name="upload_document"
+                       preemptiveAuth="true"
+                       responseEncoding="">
+                  <description/>
+                  <input>
+                     <parameter description="Bearer Token"
+                                label="Bearer Token"
+                                name="token"
+                                required="false"
+                                testWith="eyJhbGciOiJSUzI1NiIsImprdSI6Imh0dHBzOi8vbHMtZW1lYS1lcy1zYngtdm14YjllMGMuYXV0aGVudGljYXRpb24uZXUyMC5oYW5hLm9uZGVtYW5kLmNvbS90b2tlbl9rZXlzIiwia2lkIjoiZGVmYXVsdC1qd3Qta2V5LTFiZWY4MWVhZGQiLCJ0eXAiOiJKV1QiLCJqaWQiOiAiRllkMlZyNXpscUh2VkdlbTFkbXZzMUt2djlqMnlhcVI1UW1qbDc3Mndibz0ifQ.eyJqdGkiOiIyNTU1NzVhMzI0ZTE0OWZkYWI4NTYwOTMyMjMxMmNkMSIsImV4dF9hdHRyIjp7ImVuaGFuY2VyIjoiWFNVQUEiLCJzdWJhY2NvdW50aWQiOiI5YjNjODY4Ny02N2M4LTRhYzYtODA2YS1mYmE4Mzc4OTljZjkiLCJ6ZG4iOiJscy1lbWVhLWVzLXNieC12bXhiOWUwYyIsInNlcnZpY2VpbnN0YW5jZWlkIjoiNWVjMTA4MDctYzlkNS00ZTU4LWI1MzgtNjNkNjc0ODliNzhjIn0sInN1YiI6InNiLTVlYzEwODA3LWM5ZDUtNGU1OC1iNTM4LTYzZDY3NDg5Yjc4YyFiNzc2MjZ8c2RtLWRpLURvY3VtZW50TWFuYWdlbWVudC1zZG1faW50ZWdyYXRpb24hYjg3MyIsImF1dGhvcml0aWVzIjpbInNkbS1kaS1Eb2N1bWVudE1hbmFnZW1lbnQtc2RtX2ludGVncmF0aW9uIWI4NzMuc2RtYWRtaW4iLCJzZG0tZGktRG9jdW1lbnRNYW5hZ2VtZW50LXNkbV9pbnRlZ3JhdGlvbiFiODczLnNkbWJ1c2luZXNzYWRtaW4iLCJ1YWEucmVzb3VyY2UiLCJzZG0tZGktRG9jdW1lbnRNYW5hZ2VtZW50LXNkbV9pbnRlZ3JhdGlvbiFiODczLnNkbXVzZXIiLCJzZG0tZGktRG9jdW1lbnRNYW5hZ2VtZW50LXNkbV9pbnRlZ3JhdGlvbiFiODczLnNkbW1pZ3JhdGlvbmFkbWluIl0sInNjb3BlIjpbInNkbS1kaS1Eb2N1bWVudE1hbmFnZW1lbnQtc2RtX2ludGVncmF0aW9uIWI4NzMuc2RtYnVzaW5lc3NhZG1pbiIsInVhYS5yZXNvdXJjZSIsInNkbS1kaS1Eb2N1bWVudE1hbmFnZW1lbnQtc2RtX2ludGVncmF0aW9uIWI4NzMuc2RtYWRtaW4iLCJzZG0tZGktRG9jdW1lbnRNYW5hZ2VtZW50LXNkbV9pbnRlZ3JhdGlvbiFiODczLnNkbXVzZXIiLCJzZG0tZGktRG9jdW1lbnRNYW5hZ2VtZW50LXNkbV9pbnRlZ3JhdGlvbiFiODczLnNkbW1pZ3JhdGlvbmFkbWluIl0sImNsaWVudF9pZCI6InNiLTVlYzEwODA3LWM5ZDUtNGU1OC1iNTM4LTYzZDY3NDg5Yjc4YyFiNzc2MjZ8c2RtLWRpLURvY3VtZW50TWFuYWdlbWVudC1zZG1faW50ZWdyYXRpb24hYjg3MyIsImNpZCI6InNiLTVlYzEwODA3LWM5ZDUtNGU1OC1iNTM4LTYzZDY3NDg5Yjc4YyFiNzc2MjZ8c2RtLWRpLURvY3VtZW50TWFuYWdlbWVudC1zZG1faW50ZWdyYXRpb24hYjg3MyIsImF6cCI6InNiLTVlYzEwODA3LWM5ZDUtNGU1OC1iNTM4LTYzZDY3NDg5Yjc4YyFiNzc2MjZ8c2RtLWRpLURvY3VtZW50TWFuYWdlbWVudC1zZG1faW50ZWdyYXRpb24hYjg3MyIsImdyYW50X3R5cGUiOiJjbGllbnRfY3JlZGVudGlhbHMiLCJyZXZfc2lnIjoiNDMzNmE2OGQiLCJpYXQiOjE3MjgzODc2NTMsImV4cCI6MTcyODQzMDg1MywiaXNzIjoiaHR0cHM6Ly9scy1lbWVhLWVzLXNieC12bXhiOWUwYy5hdXRoZW50aWNhdGlvbi5ldTIwLmhhbmEub25kZW1hbmQuY29tL29hdXRoL3Rva2VuIiwiemlkIjoiOWIzYzg2ODctNjdjOC00YWM2LTgwNmEtZmJhODM3ODk5Y2Y5IiwiYXVkIjpbInNiLTVlYzEwODA3LWM5ZDUtNGU1OC1iNTM4LTYzZDY3NDg5Yjc4YyFiNzc2MjZ8c2RtLWRpLURvY3VtZW50TWFuYWdlbWVudC1zZG1faW50ZWdyYXRpb24hYjg3MyIsInVhYSIsInNkbS1kaS1Eb2N1bWVudE1hbmFnZW1lbnQtc2RtX2ludGVncmF0aW9uIWI4NzMiXX0.tdNn6Dh1bPL5mgFbHuSpQWGa9yjHa8n6r1ourKxn2GDEkkdZTQz6tURmo1vqBO42QtuW1VCoLyVDYODFsbgAvBt5T5-oKf1X4o7RFwHyzLGs2Q-pdYJEoeND4-55dUxCShXjxUWzjn2hko0m8xfLM8iHJ8on1Md_GEQMflcD-at6v_BN9BTAWMN_D2CZpxMFJu48wFleon9NhoQI8fZyiZmjTf-RiCDhlO0DNPfrOJsI1XxL7PMrZQ2dTTHTUrC7tcS2_6o_Gx8mwXIvkCcPWtt7YncCIsgFT_fl5W2KrsMt-kSFAlR-qiAUR2vq4-q7Ct1mXOzk3QiFDhfSjlCUEg"
+                                type="string"/>
+                     <parameter description=""
+                                label=""
+                                name="media"
+                                required="false"
+                                testWith=""
+                                type="attachment"/>
+                     <parameter description=""
+                                label=""
+                                name="cmisaction"
+                                required="false"
+                                testWith="createDocument"
+                                type="string"/>
+                     <parameter description=""
+                                label=""
+                                name="succint"
+                                required="false"
+                                testWith="true"
+                                type="string"/>
+                     <parameter description=""
+                                label=""
+                                name="filename"
+                                required="false"
+                                testWith="test_file_dummy45.pdf"
+                                type="string"/>
+                     <parameter description=""
+                                label=""
+                                name="includeAllowableActions"
+                                required="false"
+                                testWith="true"
+                                type="string"/>
+                     <parameter description=""
+                                label=""
+                                name="propertyId_0"
+                                required="false"
+                                testWith="cmis:name"
+                                type="string"/>
+                     <parameter description=""
+                                label=""
+                                name="propertyValue_0"
+                                required="false"
+                                testWith="test_file_dummy45.pdf"
+                                type="string"/>
+                     <parameter description=""
+                                label=""
+                                name="propertyId_1"
+                                required="false"
+                                testWith="cmis:objectTypeId"
+                                type="string"/>
+                     <parameter description=""
+                                label=""
+                                name="propertyValue_1"
+                                required="false"
+                                testWith="cmis:document"
+                                type="string"/>
+                  </input>
+                  <binding>
+                     <restSimpleBinding multiUsing="semicolonSeparated"
+                                        url="https://api-sdm-di.cfapps.eu20.hana.ondemand.com/browser/ZSBX_MDM/root/test_folder"
+                                        verb="POST">
+                        <mutualAuth enabled="false">
+                           <keyStore mode="file"/>
+                           <keyStorePassword/>
+                        </mutualAuth>
+                        <httpHeaders>
+                           <header name="Authorization">Bearer {$token}</header>
+                           <header name="Accept">*/*</header>
+                           <header name="Content-Type">application/x-www-form-urlencoded; charset=UTF-8</header>
+                        </httpHeaders>
+                        <body>{'cmisaction='|| $cmisaction ||'&amp;amp;'||'propertyId[0]='|| $propertyId_0 ||'&amp;amp;'||'propertyValue[0]='|| $propertyValue_0 ||'&amp;amp;'||'propertyId[1]='|| $propertyId_1 ||'&amp;amp;'||'propertyValue[1]='|| $propertyValue_1 ||'&amp;amp;'||'succint='|| $succint ||'&amp;amp;'||'filename='|| $filename ||'&amp;amp;'||'includeAllowableActions='|| $includeAllowableActions}</body>
+                     </restSimpleBinding>
+                  </binding>
+                  <output>
+                     <field description=""
+                            name="upload_document_response"
+                            responseHeader="cmis:objectId"
+                            type="string"/>
+                     <field description="" entireResponse="true" name="RES" type="string"/>
+                  </output>
+               </action>
+            </actions>
+            <objects/>
+         </businessConnector>
+      </types1:Entry>
+      <types1:GUID>4FfTYx53rGQkj9jIwP57wY</types1:GUID>
+      <types1:DisplayName>service_connector_file_attachment_process</types1:DisplayName>
+   </types1:Item>
+   <types1:CurrentServerDateTime>2025-01-21T05:35:27.481Z</types1:CurrentServerDateTime>
+</aetgt:getResponse>
