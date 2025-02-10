@@ -20,7 +20,7 @@
     }
   },
   "dataFileExtension" : "xml",
-  "updateTime" : "2025-01-21T10:25:38.451Z",
+  "updateTime" : "2025-02-10T08:59:42.167Z",
   "objectRefs" : [ {
     "id" : "4cFfmK4YzOZjLeUR5IvZ8S",
     "name" : "infac360sf_mt_salesforce_account_organization_inbound",
@@ -33,10 +33,7 @@
       "repoInfo" : {
         "repoHandle" : "010QRS0Z000000000041"
       },
-      "contextAttributes" : [ {
-        "name" : "id",
-        "value" : "@1"
-      } ],
+      "contextAttributes" : null,
       "additionalInfo" : {
         "description" : "Runs the mapping that maps the fields of the Salesforce Accounts object with the fields of the Organization business entity to import data.",
         "contentType" : null,

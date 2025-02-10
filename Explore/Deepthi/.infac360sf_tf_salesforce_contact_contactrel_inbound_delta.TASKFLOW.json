@@ -20,7 +20,7 @@
     }
   },
   "dataFileExtension" : "xml",
-  "updateTime" : "2025-01-21T10:25:38.472Z",
+  "updateTime" : "2025-02-10T08:59:42.170Z",
   "objectRefs" : [ {
     "id" : "dg7LDLb3Vilf71FPGtso4q",
     "name" : "infac360sf_mt_salesforce_contact_contactrel_inbound",
@@ -33,10 +33,7 @@
       "repoInfo" : {
         "repoHandle" : "010QRS0Z00000000003Y"
       },
-      "contextAttributes" : [ {
-        "name" : "id",
-        "value" : "@1"
-      } ],
+      "contextAttributes" : null,
       "additionalInfo" : {
         "description" : "Runs the mapping that maps the fields of the Salesforce Account Contact Relationship object with the fields of the Person business entity to import data.",
         "contentType" : null,

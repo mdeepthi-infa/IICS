@@ -20,7 +20,7 @@
     }
   },
   "dataFileExtension" : "xml",
-  "updateTime" : "2025-01-21T10:25:38.479Z",
+  "updateTime" : "2025-02-10T08:59:42.174Z",
   "objectRefs" : [ {
     "id" : "gysSDQquCm6jhU5H2eIWA4",
     "name" : "infac360sf_mt_salesforce_accountpartner_partnerrel_inbound",
@@ -33,10 +33,7 @@
       "repoInfo" : {
         "repoHandle" : "010QRS0Z000000000045"
       },
-      "contextAttributes" : [ {
-        "name" : "id",
-        "value" : "@1"
-      } ],
+      "contextAttributes" : null,
       "additionalInfo" : {
         "description" : "Runs the mapping that maps the fields of the Salesforce Account Partner Relationship object with the fields of the Account Partner Relationship Object to import data.",
         "contentType" : null,

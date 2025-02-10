@@ -20,7 +20,7 @@
     }
   },
   "dataFileExtension" : "xml",
-  "updateTime" : "2025-01-21T10:25:38.464Z",
+  "updateTime" : "2025-02-10T08:59:42.173Z",
   "objectRefs" : [ {
     "id" : "4DV6oUDKpWkf8Ztxd40Quw",
     "name" : "infac360sf_mt_salesforce_person_contact_outbound",
@@ -33,10 +33,7 @@
       "repoInfo" : {
         "repoHandle" : "010QRS0Z000000000044"
       },
-      "contextAttributes" : [ {
-        "name" : "id",
-        "value" : "@1"
-      } ],
+      "contextAttributes" : null,
       "additionalInfo" : {
         "description" : "Runs the mapping that maps the fields of the Person business entity with the fields of the Salesforce Contacts object to export data.",
         "contentType" : null,
